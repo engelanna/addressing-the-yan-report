@@ -8,6 +8,7 @@ license = "Proprietary"
 [tool.poetry.dependencies]
 python = "^3.7"
 streamlit = "^1.9.0"
+genome-browser = {git = "https://github.com/clintval/genome-browser.git", rev = "d073811"}
 
 [tool.poetry.dev-dependencies]
 
