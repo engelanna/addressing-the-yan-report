@@ -1,0 +1,2 @@
+class ProbabilityOfStringInRange:
+    pass

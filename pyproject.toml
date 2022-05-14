@@ -6,11 +6,18 @@ authors = ["Anna Engel <anna.julia.engel@gmail.com>"]
 license = "Proprietary"
 
 [tool.poetry.dependencies]
-python = "^3.7"
-streamlit = "^1.9.0"
 genome-browser = {git = "https://github.com/clintval/genome-browser.git", rev = "d073811"}
+numpy = "^1.22.3"
+python = ">=3.8,<3.11"
+streamlit = "^1.9.0"
+matplotlib = "^3.5.2"
+more-itertools = "^8.13.0"
+scipy = "^1.8.0"
+ipython = "^8.3.0"
+pytest = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
