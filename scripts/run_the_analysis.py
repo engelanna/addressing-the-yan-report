@@ -1,3 +1,5 @@
+# pd.read_csv("assets/bed/genomic_ranges_patent_us7279327b2.bed", sep="\t", comment="#")
+
 import numpy as np
 import genome_browser as gb
 

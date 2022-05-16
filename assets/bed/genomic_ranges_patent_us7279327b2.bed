@@ -1,4 +1,4 @@
-Restriction enzyme  Start   End Strand
+#Nucleotides  Start   End Strand    Restriction enzyme
 GCCNNNNNGGC  6364    7859    +  BglI_1
 CCANNNNNNTGG   10094   11589    +   BstXI
 GCCNNNNNGGC  11610   13105    + BglI_2
