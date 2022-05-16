@@ -1,4 +1,4 @@
-from . import GenomicRange
+from .. import GenomicRange
 
 
 class BuildGenomicRange:

@@ -1,4 +1,4 @@
-from ..constants import RestrictionEnzymeLocations
+from ...constants import RestrictionEnzymeLocations
 from . import BuildGenomicRange
 
 
