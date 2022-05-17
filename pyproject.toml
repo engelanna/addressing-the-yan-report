@@ -6,7 +6,7 @@ authors = ["Anna Engel <anna.julia.engel@gmail.com>"]
 license = "Proprietary"
 
 [tool.poetry.dependencies]
-genome-browser = {git = "https://github.com/clintval/genome-browser.git", rev = "d073811"}
+genome-browser = {git = "https://github.com/engelanna/genome-browser.git", branch = "feature/specify-deps-with-poetry"}
 numpy = "^1.22.3"
 python = ">=3.8,<3.11"
 streamlit = "^1.9.0"
