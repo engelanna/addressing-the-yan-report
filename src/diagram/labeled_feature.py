@@ -1,0 +1,76 @@
+from genome_browser import (
+    ALPHA,
+    ax_off,
+    despine,
+    disjoint_bins,
+    Feature,
+    PADDING,
+    Track,
+)
+from matplotlib import pyplot as plt
+import matplotlib.patches as patches
+import numpy as np
+
+
+class LabeledFeature(Feature):
+    def _plot(self, ax=None):
+        if ax is None:
+            ax = plt.gca()
+
+        # Height of the features is some percent less than one.
+        height = 1 / (PADDING + 1)
+
+        # The non-overlapping disjoint intervals are computed using the
+        # logic which priortizes first position of interval, then length.
+        levels = list(disjoint_bins(self._intervals))
+
+        # pull_back is the distance in units to pull back corners for
+        # directional intervals
+        pull_back = self.pullback * 0.005 * abs(np.subtract(*self.xlim))
+
+        for (position, width, strand, color), level in zip(
+            self._sorted_features, levels
+        ):
+
+            # pull_back is used on either the start or end of the interval
+            # depending on the strand, if the pull_back is greater than the
+            # width of the interval, then just pull back the entire width.
+            start_taper = min(pull_back if strand == "-" else 0, width)
+            end_taper = min(pull_back if strand == "+" else 0, width)
+
+            # The polygon is simply a rectangle with two variable midpoints at
+            # the middle of the left and right sides which act as anchors.
+            # The four corners can be 'pulled back' (either left or right) to
+            # simulate a directional rectangle.
+            ax.add_patch(
+                patches.Polygon(
+                    [
+                        [position + start_taper, level],
+                        [position, level + height / 2],
+                        [position + start_taper, level + height],
+                        [position + width - end_taper, level + height],
+                        [position + width, level + height / 2],
+                        [position + width - end_taper, level],
+                    ],
+                    lw=0,
+                    closed=True,
+                    color=color,
+                    alpha=ALPHA,
+                )
+            )
+            plt.text(
+                position + width / 2,
+                level + height / 2,
+                "Gotcha",
+                color="#FFFFFF",
+                ha="center",
+                va="center",
+            )
+
+        # For features, remove y-axis by default.
+        ax = despine(ax_off(ax, axis="y"))
+
+        # Adjust y-limits to include padding, scales with the number of levels.
+        ax.set_ylim((0 - PADDING) * (max(levels) + 1) / 2, max(levels) + 1)
+        ax.set_xlim(*self.xlim)
+        return ax
