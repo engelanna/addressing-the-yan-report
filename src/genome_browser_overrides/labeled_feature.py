@@ -71,6 +71,8 @@ class LabeledFeature(Feature):
                 color="black",
                 ha="center",
                 va="center_baseline",
+                rotation=45,
+                rotation_mode="anchor",
             )
 
         # For features, remove y-axis by default.
