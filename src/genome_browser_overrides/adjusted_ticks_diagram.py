@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-class DefaultTicksDiagram(GenomeDiagram):
+class AdjustedTicksDiagram(GenomeDiagram):
     def draw(self):
         # Construct a one-column figure with rows that follow the hight_ratios
         # defined in each of the tracks defined. At the moment only a generic

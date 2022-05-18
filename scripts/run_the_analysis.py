@@ -3,12 +3,12 @@ from matplotlib import pyplot as plt
 from .config_the_analysis import THE_CONFIG
 from src.genomic_ranges import BuildGenomicRangeList
 from src.genome_browser_overrides import (
-    DefaultTicksDiagram,
+    AdjustedTicksDiagram,
     LabeledFeature,
 )
 
 genome_length = 29903
-g = DefaultTicksDiagram()
+g = AdjustedTicksDiagram()
 
 
 # Plot 9 random interval features (random start, length, orientation, and color).
