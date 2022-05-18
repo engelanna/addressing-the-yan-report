@@ -1,2 +1,2 @@
-from .adjusted_ticks_diagram import AdjustedTicksDiagram
-from .labeled_feature import LabeledFeature
+from .overridden_diagram import OverridenDiagram
+from .overridden_feature import OverriddenFeature
