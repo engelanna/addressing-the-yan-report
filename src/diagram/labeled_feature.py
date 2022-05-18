@@ -52,19 +52,19 @@ class LabeledFeature(Feature):
                         [position + width, level + height / 2],
                         [position + width - end_taper, level],
                     ],
-                    lw=0,
+                    linewidth=0.5,
                     closed=True,
-                    color=color,
                     alpha=ALPHA,
+                    fill=False,
                 )
             )
             plt.text(
                 position + width / 2,
                 level + height / 2,
                 "Gotcha",
-                color="#FFFFFF",
+                color="black",
                 ha="center",
-                va="center",
+                va="center_baseline",
             )
 
         # For features, remove y-axis by default.
