@@ -13,6 +13,10 @@ import numpy as np
 
 
 class LabeledFeature(Feature):
+    def __init__(self, name=None, height_ratio=1):
+        Feature.__init__(self, name, height_ratio)
+        self.step = 1000
+
     @property
     def xlim(self):
         """Return a tuple of the smallest and largest break in all features."""

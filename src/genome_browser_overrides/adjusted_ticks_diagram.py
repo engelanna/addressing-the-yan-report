@@ -52,11 +52,12 @@ class AdjustedTicksDiagram(GenomeDiagram):
             else:
                 ax.spines["bottom"].set_visible(True)
                 # Set the positions every step size after the 0-defined min.
-                # ax.set_xticks(range(*map(int, ax.get_xlim()), track.step))
-                # # Set the labels as numbers increasing by step, after 0.
-                # ax.set_xticklabels(
-                #     range(0, int(abs(np.subtract(*ax.get_xlim()))), track.step)
-                # )
+                ax.set_xticks(range(*map(int, ax.get_xlim()), track.step))
+                # Set the labels as numbers increasing by step, after 0.
+                ax.set_xticklabels(
+                    range(0, int(abs(np.subtract(*ax.get_xlim()))), track.step)
+                )
+                ax.xaxis.set_major_formatter(lambda x, _pos: f"{x // 1000}k")
                 # Figure annotations will be applied to the last ax in offset
                 # coordinates in a lightgray text. Clipping is ignored as the
                 # text clearly cips with the axes outboard frame.
