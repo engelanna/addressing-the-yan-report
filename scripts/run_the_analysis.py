@@ -3,10 +3,9 @@ import genome_browser as gb
 
 from .config_the_analysis import THE_CONFIG
 from src.genomic_ranges import BuildGenomicRangeList
-from src.diagram import LabeledFeature
+from src.genome_browser_overrides import LabeledFeature
 
 genome_length = 29903
-
 g = gb.GenomeDiagram()
 
 

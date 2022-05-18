@@ -5,14 +5,20 @@ from genome_browser import (
     disjoint_bins,
     Feature,
     PADDING,
-    Track,
 )
+from itertools import chain as chain
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
 
 class LabeledFeature(Feature):
+    @property
+    def xlim(self):
+        """Return a tuple of the smallest and largest break in all features."""
+        edges = tuple(chain.from_iterable(self._intervals))
+        return min(edges), max(edges) + 100
+
     def _plot(self, ax=None):
         if ax is None:
             ax = plt.gca()
