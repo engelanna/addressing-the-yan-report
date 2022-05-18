@@ -1,1 +1,1 @@
-from .fasta_dict_from_file import FastaDictFromFile
+from .sole_sequence_from_fasta_file import SoleSequenceFromFastaFile
