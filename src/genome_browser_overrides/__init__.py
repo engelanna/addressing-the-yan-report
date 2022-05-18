@@ -1,1 +1,2 @@
+from .default_ticks_diagram import DefaultTicksDiagram
 from .labeled_feature import LabeledFeature
