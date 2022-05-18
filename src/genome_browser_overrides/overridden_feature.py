@@ -13,6 +13,11 @@ import numpy as np
 
 
 class OverriddenFeature(Feature):
+    """
+    Adds text labels.
+    Changes step to 1k.
+    """
+
     def __init__(self, name=None, height_ratio=1):
         Feature.__init__(self, name, height_ratio)
         self.step = 1000

@@ -10,6 +10,10 @@ import numpy as np
 
 
 class OverridenDiagram(GenomeDiagram):
+    """
+    Formats xticks as 1k, 2k etc.
+    """
+
     def draw(self):
         # Construct a one-column figure with rows that follow the hight_ratios
         # defined in each of the tracks defined. At the moment only a generic
