@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import genome_browser as gb
 
-from src.genomic_ranges import BuildGenomicRanges
+from src.genomic_ranges import BuildGenomicRangeList
 from src.diagram import LabeledFeature
 
 genome_length = 29903
@@ -24,7 +24,7 @@ g.add_track(track1)
 
 # Plot 9 random interval features (random start, length, orientation, and color).
 track = LabeledFeature("Random Intervals", height_ratio=0.4)
-for genomic_range in BuildGenomicRanges()(genome_length):
+for genomic_range in BuildGenomicRangeList().from_locations_in_patent(genome_length):
     # Feature must follow iterable as (position, width, strand, color)
     track.add_feature(genomic_range)
 
