@@ -1,9 +1,7 @@
-# pd.read_csv("assets/bed/genomic_ranges_patent_us7279327b2.bed", sep="\t", comment="#")
-
 from matplotlib import pyplot as plt
-import numpy as np
 import genome_browser as gb
 
+from .config_the_analysis import THE_CONFIG
 from src.genomic_ranges import BuildGenomicRangeList
 from src.diagram import LabeledFeature
 
@@ -11,20 +9,13 @@ genome_length = 29903
 
 g = gb.GenomeDiagram()
 
-# Plot a density of random data, interpolated and filled.
-track1 = gb.Graph("Random Density")
-track1.new_graph(
-    x=np.arange(genome_length),
-    y=np.abs(np.random.randn(genome_length)),
-    fmt="interpolate",
-    fill=True,
-)
-
-g.add_track(track1)
 
 # Plot 9 random interval features (random start, length, orientation, and color).
 track = LabeledFeature("Random Intervals", height_ratio=0.4)
-for genomic_range in BuildGenomicRangeList().from_locations_in_patent(genome_length):
+
+for genomic_range in BuildGenomicRangeList().from_bed_file(
+    THE_CONFIG.input_bed_file_path
+):
     # Feature must follow iterable as (position, width, strand, color)
     track.add_feature(genomic_range)
 

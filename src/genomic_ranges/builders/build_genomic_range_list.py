@@ -26,7 +26,7 @@ class BuildGenomicRangeList:
     def from_bed_file(self, bed_file_path: str) -> List[GenomicRange]:
         return list(
             pd.read_csv(
-                "assets/bed/genes_sars_cov_2_nc_045512.2.bed",
+                bed_file_path,
                 sep="\t",
                 header=None,
             ).apply(lambda row: (row[1], row[2] - row[1], row[5], "#E74C3C"), axis=1)

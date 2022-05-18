@@ -802,6 +802,14 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "ostruct"
+version = "4.0.0"
+description = "OpenStruct Data Structure"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
@@ -1498,7 +1506,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "ac0700695257e98f57167971c8df41e11f0ab24d250cc4f5aebc0273e47cd063"
+content-hash = "376568f466f2516a9d7e9e9a89f9d7f8aa50237ef5bde7f48167c5019771f7f7"
 
 [metadata.files]
 altair = [
@@ -1985,6 +1993,10 @@ numpy = [
     {file = "numpy-1.22.3-cp39-cp39-win_amd64.whl", hash = "sha256:639b54cdf6aa4f82fe37ebf70401bbb74b8508fddcf4797f9fe59615b8c5813a"},
     {file = "numpy-1.22.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c34ea7e9d13a70bf2ab64a2532fe149a9aced424cd05a2c4ba662fd989e3e45f"},
     {file = "numpy-1.22.3.zip", hash = "sha256:dbc7601a3b7472d559dc7b933b18b4b66f9aa7452c120e87dfb33d02008c8a18"},
+]
+ostruct = [
+    {file = "ostruct-4.0.0-py3-none-any.whl", hash = "sha256:47ff02aebee0a6def2d1f7774f69c448afc5b350ca8a4318ade479f6b7877be3"},
+    {file = "ostruct-4.0.0.tar.gz", hash = "sha256:d798ed3fb9389279ae11b9843cca8310e105eb657a08cc9ed58a91dc679067f0"},
 ]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
