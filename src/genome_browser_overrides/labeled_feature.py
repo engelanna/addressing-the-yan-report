@@ -45,8 +45,8 @@ class LabeledFeature(Feature):
             # pull_back is used on either the start or end of the interval
             # depending on the strand, if the pull_back is greater than the
             # width of the interval, then just pull back the entire width.
-            start_taper = min(pull_back if strand == "-" else 0, width)
-            end_taper = min(pull_back if strand == "+" else 0, width)
+            start_taper = min(0, width)
+            end_taper = min(0, width)
 
             # The polygon is simply a rectangle with two variable midpoints at
             # the middle of the left and right sides which act as anchors.
