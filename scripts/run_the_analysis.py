@@ -12,7 +12,7 @@ g = DefaultTicksDiagram()
 
 
 # Plot 9 random interval features (random start, length, orientation, and color).
-track = LabeledFeature("Random Intervals", height_ratio=0.4)
+track = LabeledFeature(f"{THE_CONFIG.subject_name} structure", height_ratio=0.4)
 
 for genomic_range in BuildGenomicRangeList().from_bed_file(
     THE_CONFIG.input_bed_file_path
