@@ -3,12 +3,12 @@ from matplotlib import pyplot as plt
 from .config_the_analysis import THE_CONFIG
 from src.genomic_ranges import BuildGenomicRangeList
 from src.genome_browser_overrides import (
-    OverridenDiagram,
+    OverridenGenomeDiagram,
     OverriddenFeature,
 )
 
 genome_length = 29903
-g = OverridenDiagram()
+g = OverridenGenomeDiagram()
 
 
 # Plot 9 random interval features (random start, length, orientation, and color).

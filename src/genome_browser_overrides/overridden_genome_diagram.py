@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-class OverridenDiagram(GenomeDiagram):
+class OverridenGenomeDiagram(GenomeDiagram):
     """
     Formats xticks as 1k, 2k etc.
     """
