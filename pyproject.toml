@@ -9,7 +9,6 @@ license = "Proprietary"
 genome-browser = {git = "https://github.com/engelanna/genome-browser.git", branch = "feature/specify-deps-with-poetry"}
 numpy = "^1.22.3"
 python = ">=3.8,<3.11"
-streamlit = "^1.9.0"
 matplotlib = "^3.5.2"
 more-itertools = "^8.13.0"
 scipy = "^1.8.0"
