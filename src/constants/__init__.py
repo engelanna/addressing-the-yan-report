@@ -1,1 +1,1 @@
-from .restriction_enzyme_locations import RestrictionEnzymeLocations
+from .restriction_enzymes import RESTRICTION_ENZYMES

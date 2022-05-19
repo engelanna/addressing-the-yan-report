@@ -1,4 +1,4 @@
-from src.genomic_ranges import BuildGenomicRangeList
+from src.genomic_range_builders import BuildGenomicRangeList
 
 
 class TestBuildGenomicRangeList:
@@ -19,6 +19,6 @@ class TestBuildGenomicRangeList:
         expected_genomic_ranges_from_sars_cov_2_bed_file,
         bed_file_path="assets/bed/genes_sars_cov_2_nc_045512.2.bed",
     ):
-        actual_output = BuildGenomicRangeList().from_bed_file(bed_file_path)
+        actual_output = BuildGenomicRangeList().from_sars_cov_2_bed_file(bed_file_path)
 
         assert expected_genomic_ranges_from_sars_cov_2_bed_file == actual_output

@@ -43,7 +43,7 @@ class OverriddenFeature(Feature):
         # directional intervals
         pull_back = self.pullback * 0.005 * abs(np.subtract(*self.xlim))
 
-        for (position, width, strand, color), level in zip(
+        for (position, width, strand, color, text_label), level in zip(
             self._sorted_features, levels
         ):
 
@@ -71,13 +71,14 @@ class OverriddenFeature(Feature):
                     closed=True,
                     alpha=ALPHA,
                     fill=False,
+                    color="orange",
                 )
             )
             plt.text(
                 position + width / 2,
                 level + height / 2,
-                "Gotcha",
-                color="black",
+                text_label,
+                color="blue",
                 ha="center",
                 va="center_baseline",
                 rotation=45,
