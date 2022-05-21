@@ -11,7 +11,6 @@ from src.genome_browser_overrides import (
 genome_length = 29903
 g = OverridenGenomeDiagram()
 
-
 # Plot SARS-CoV-2
 track = OverriddenFeature(f"{THE_CONFIG.subject_name} structure", height_ratio=0.4)
 for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
@@ -19,6 +18,15 @@ for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
 ):
     track.add_feature(astuple(genomic_range))
 g.add_track(track)
+
+# Plot locations from patent
+track = OverriddenFeature(f"Restriction enzymes", height_ratio=0.4)
+for genomic_range in BuildGenomicRangeList().from_locations_in_patent(
+    genome_length=genome_length, tolerance_as_fraction_of_genome_length=0.05
+):
+    track.add_feature(astuple(genomic_range))
+g.add_track(track)
+
 
 # Annotate the figure with interval specific metadata. Will always appear in lower-right
 g.annotation = "{}:{:,}-{:,}".format("chr3", 20000, 812383)

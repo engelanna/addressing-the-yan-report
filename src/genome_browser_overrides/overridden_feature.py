@@ -67,16 +67,16 @@ class OverriddenFeature(Feature):
                         [position + width, level + height / 2],
                         [position + width - end_taper, level],
                     ],
+                    linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
                     fill=False,
                     color="orange",
                 )
             )
-            plt.text(
-                position + width / 2,
-                level + height / 2,
+            ax.annotate(
                 text_label,
+                [position + width / 2, level + height / 2],
                 color="blue",
                 ha="center",
                 va="center_baseline",

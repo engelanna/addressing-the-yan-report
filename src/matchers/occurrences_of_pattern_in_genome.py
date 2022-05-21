@@ -14,18 +14,17 @@ class OccurrencesOfPatternInGenome:
 
     def __call__(
         self,
-        regexp_pattern: str,
+        sequence: str,
         start_position: int = 0,
         end_position: int = maxsize,
     ) -> Dict[Tuple, str]:
+        regexp_pattern = sequence.replace("N", r"\w")
 
         match_objects = list(
             compile(regexp_pattern).finditer(self.genome, start_position, end_position)
         )
 
         return [
-            SequenceOccurrence(
-                span=match_object.span(), regexp_pattern=match_object.group()
-            )
+            SequenceOccurrence(span=match_object.span(), sequence=match_object.group())
             for match_object in match_objects
         ]
