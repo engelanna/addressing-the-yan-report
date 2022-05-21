@@ -1,4 +1,8 @@
 class SoleSequenceFromFastaFile:
+    """Accepts a single entry FASTA file => discards the header, returning the sequence.
+    Raises AssertionError when the FASTA file is multi-sequence.
+    """
+
     def __call__(self, file_path: str):
 
         the_sequence = ""

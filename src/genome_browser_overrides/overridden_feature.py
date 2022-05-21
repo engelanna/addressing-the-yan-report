@@ -14,7 +14,7 @@ import numpy as np
 
 class OverriddenFeature(Feature):
     """
-    Adds text labels.
+    Adds text labels to genomic intervals.
     Changes step to 1k.
     """
 
@@ -67,7 +67,6 @@ class OverriddenFeature(Feature):
                         [position + width, level + height / 2],
                         [position + width - end_taper, level],
                     ],
-                    linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
                     fill=False,
