@@ -8,7 +8,7 @@ from typing import (
 )
 
 
-class OccurrencesOfPatternInGenome:
+class NonoverlappingOccurrencesOfSequenceInGenome:
     def __init__(self, genome: str):
         self.genome = genome
 

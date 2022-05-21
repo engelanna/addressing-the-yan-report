@@ -1,1 +1,3 @@
-from .occurrences_of_pattern_in_genome import OccurrencesOfPatternInGenome
+from .nonoverlapping_occurrences_of_sequence_in_genome import (
+    NonoverlappingOccurrencesOfSequenceInGenome,
+)
