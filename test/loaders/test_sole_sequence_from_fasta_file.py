@@ -5,7 +5,7 @@ from src.loaders import SoleSequenceFromFastaFile
 class TestSoleSequenceFromFastaFile:
     def test_length_of_the_only_sequence(
         self,
-        file_path="assets/fasta/sars_cov_2_nc_045512.2.fasta",
+        file_path="assets/fasta/NC_045512.2.fasta",
         expected_length=29903,
     ):
         actual_length = len(SoleSequenceFromFastaFile()(file_path))
