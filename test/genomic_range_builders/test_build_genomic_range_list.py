@@ -1,4 +1,5 @@
 from src.genomic_range_builders import BuildGenomicRangeList
+from scripts.config_the_analysis import THE_CONFIG
 
 
 class TestBuildGenomicRangeList:
@@ -17,7 +18,7 @@ class TestBuildGenomicRangeList:
     def test_building_from_sars_cov_2_bed_file(
         self,
         expected_genomic_ranges_from_sars_cov_2_bed_file,
-        bed_file_path="assets/bed/genes_sars_cov_2_nc_045512.2.bed",
+        bed_file_path=THE_CONFIG.input_bed_file_for_diagram,
     ):
         actual_output = BuildGenomicRangeList().from_sars_cov_2_bed_file(bed_file_path)
 

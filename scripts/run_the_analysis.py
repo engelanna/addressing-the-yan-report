@@ -12,9 +12,11 @@ genome_length = 29903
 g = OverridenGenomeDiagram()
 
 # Plot SARS-CoV-2
-track = OverriddenFeature(f"{THE_CONFIG.subject_name} structure", height_ratio=0.4)
+track = OverriddenFeature(
+    f"{THE_CONFIG.subject_name_for_diagram} structure", height_ratio=0.4
+)
 for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
-    THE_CONFIG.input_bed_file_path
+    THE_CONFIG.input_bed_file_for_diagram
 ):
     track.add_feature(astuple(genomic_range))
 g.add_track(track)
