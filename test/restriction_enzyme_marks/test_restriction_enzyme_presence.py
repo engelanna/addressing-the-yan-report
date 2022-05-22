@@ -1,18 +1,30 @@
+from pytest import fixture
+
+from src.dataclasses import RestrictionEnzyme
 from src.restriction_enzyme_marks import RestrictionEnzymePresence
 
 
 class TestRestrictionEnzymePresence:
-    def test_presence(
-        self,
-        sars_cov_2_genome,
+    @fixture
+    def mock_restriction_enzyme(self):
+        return RestrictionEnzyme(
+            start_at_fraction_genome_length=0.5,
+            name="Not a real restriction enzyme, but good enough for test purposes",
+            sequence="CATNNNNNNACT",
+        )
+
+    def test_presence_within_tolerance(
+        self, sars_cov_2_genome, mock_restriction_enzyme, tolerance=0.05
     ):
-        pass
+        actual = RestrictionEnzymePresence()(
+            sars_cov_2_genome, mock_restriction_enzyme, tolerance
+        )
+        assert True == actual
 
-    def test_absence(
-        self,
-        sars_cov_2_genome,
+    def test_absence_within_tolerance(
+        self, sars_cov_2_genome, mock_restriction_enzyme, tolerance=0.025
     ):
-        pass
-
-
-# RestrictionEnzyme(location_as_fraction_genome_length=0.2378245614, name="BglI", sequence="GCCNNNNNGGC")
+        actual = RestrictionEnzymePresence()(
+            sars_cov_2_genome, mock_restriction_enzyme, tolerance
+        )
+        assert False == actual

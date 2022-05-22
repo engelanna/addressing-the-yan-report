@@ -16,7 +16,7 @@ class BuildGenomicRange:
 
         width = tolerance_as_fraction_of_genome_length * genome_length
         start = (
-            restriction_enzyme.location_as_fraction_genome_length * genome_length
+            restriction_enzyme.start_at_fraction_genome_length * genome_length
         ) - width / 2
 
         return GenomicRange(
