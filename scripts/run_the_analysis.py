@@ -13,10 +13,10 @@ g = OverridenGenomeDiagram()
 
 # Plot SARS-CoV-2
 track = OverriddenFeature(
-    f"{THE_CONFIG.diagram.subject_name} structure", height_ratio=0.4
+    THE_CONFIG.sars_cov_2_structure_diagram.title, height_ratio=0.4
 )
 for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
-    THE_CONFIG.diagram.genomic_ranges_bed_file
+    THE_CONFIG.sars_cov_2_structure_diagram.genes_bed_file
 ):
     track.add_feature(astuple(genomic_range))
 g.add_track(track)

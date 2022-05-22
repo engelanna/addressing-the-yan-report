@@ -11,7 +11,7 @@ import numpy as np
 
 class OverridenGenomeDiagram(GenomeDiagram):
     """
-    Formats xticks as 1k, 2k etc.
+    Formats the xticks as 1k, 2k etc.
     """
 
     def draw(self):

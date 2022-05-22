@@ -18,7 +18,7 @@ class TestBuildGenomicRangeList:
     def test_building_from_sars_cov_2_bed_file(
         self,
         expected_genomic_ranges_from_sars_cov_2_bed_file,
-        bed_file_path=THE_CONFIG.diagram.genomic_ranges_bed_file,
+        bed_file_path=THE_CONFIG.sars_cov_2_structure_diagram.genes_bed_file,
     ):
         actual_output = BuildGenomicRangeList().from_sars_cov_2_bed_file(bed_file_path)
 
