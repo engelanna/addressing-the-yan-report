@@ -1,0 +1,2 @@
+class RestrictionEnzymePresence:
+    pass

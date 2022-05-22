@@ -1,2 +1,2 @@
 from .overridden_genome_diagram import OverridenGenomeDiagram
-from .overridden_feature import OverriddenFeature
+from .feature_overrides import *

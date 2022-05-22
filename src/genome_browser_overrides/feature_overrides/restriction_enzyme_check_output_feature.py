@@ -11,8 +11,10 @@ from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
+from src.constants import COLORS
 
-class OverriddenFeature(Feature):
+
+class RestrictionEnzymeCheckOutputFeature(Feature):
     """
     Adds text labels to genomic intervals.
     Changes step to 1k.
@@ -70,14 +72,14 @@ class OverriddenFeature(Feature):
                     linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
-                    fill=False,
-                    color="orange",
+                    fill=True,
+                    color=color,
                 )
             )
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
-                color="blue",
+                color="black",
                 ha="center",
                 va="center_baseline",
                 rotation=45,

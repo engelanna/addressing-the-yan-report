@@ -1,4 +1,5 @@
-from ..dataclasses import (
+from src.constants import COLORS
+from src.dataclasses import (
     GenomicRange,
     RestrictionEnzyme,
 )
@@ -10,7 +11,7 @@ class BuildGenomicRange:
         genome_length: int,
         restriction_enzyme: RestrictionEnzyme,
         tolerance_as_fraction_of_genome_length: float,
-        color: str = "#E74C3C",
+        color: str = COLORS.miss,
     ) -> GenomicRange:
 
         width = tolerance_as_fraction_of_genome_length * genome_length

@@ -1,7 +1,10 @@
 import pandas as pd
 from typing import List
 
-from ..constants import RESTRICTION_ENZYMES
+from ..constants import (
+    COLORS,
+    RESTRICTION_ENZYMES,
+)
 from ..dataclasses import GenomicRange
 from . import BuildGenomicRange
 
@@ -13,7 +16,7 @@ class BuildGenomicRangeList:
     def from_sars_cov_2_bed_file(self, bed_file_path: str) -> List[GenomicRange]:
         df = pd.read_csv(bed_file_path, sep="\t", header=None)
         formatted_rows = df.apply(
-            lambda row: (row[1], row[2] - row[1], row[5], "#E74C3C", row[3]), axis=1
+            lambda row: (row[1], row[2] - row[1], row[5], COLORS.miss, row[3]), axis=1
         )
 
         return [GenomicRange(*row) for row in formatted_rows]

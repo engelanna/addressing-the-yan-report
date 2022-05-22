@@ -1,4 +1,4 @@
-from src.dataclasses import RestrictionEnzyme
+from src.dataclasses.restriction_enzyme import RestrictionEnzyme
 
 
 RESTRICTION_ENZYMES = (
