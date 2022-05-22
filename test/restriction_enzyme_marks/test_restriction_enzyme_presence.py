@@ -1,11 +1,17 @@
-from src.dataclasses import RestrictionEnzyme
+from src.restriction_enzyme_marks import RestrictionEnzymePresence
 
 
 class TestRestrictionEnzymePresence:
-    def test_presence(self):
+    def test_presence(
+        self,
+        sars_cov_2_genome,
+    ):
         pass
 
-    def test_absence(self):
+    def test_absence(
+        self,
+        sars_cov_2_genome,
+    ):
         pass
 
 
