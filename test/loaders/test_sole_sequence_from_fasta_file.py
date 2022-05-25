@@ -6,7 +6,7 @@ from scripts.config_the_analysis import THE_CONFIG
 class TestSoleSequenceFromFastaFile:
     def test_length_of_the_only_sequence(
         self,
-        file_path=THE_CONFIG.sars_cov_2_genome.fasta_file_path,
+        file_path=THE_CONFIG.genome_under_test.fasta_file_path,
         expected_length=29903,
     ):
         actual_length = len(SoleSequenceFromFastaFile()(file_path))

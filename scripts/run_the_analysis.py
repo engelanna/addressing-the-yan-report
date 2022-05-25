@@ -8,6 +8,7 @@ from src.genome_browser_overrides import (
     GeneticStructureFeature,
     RestrictionEnzymeCheckOutputFeature,
 )
+from src.loaders import SoleSequenceFromFastaFile
 
 genome_length = 29903
 g = OverridenGenomeDiagram()
@@ -23,9 +24,10 @@ for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
 g.add_track(track)
 
 # Plot locations from patent
+genome = SoleSequenceFromFastaFile()(THE_CONFIG.genome_under_test.fasta_file_path)
 track = RestrictionEnzymeCheckOutputFeature(f"Restriction enzymes", height_ratio=0.4)
 for genomic_range in BuildGenomicRangeList().from_locations_in_patent(
-    genome_length=genome_length, tolerance_as_fraction_of_genome_length=0.05
+    genome, tolerance_as_fraction_of_genome_length=0.05
 ):
     track.add_feature(astuple(genomic_range))
 g.add_track(track)
