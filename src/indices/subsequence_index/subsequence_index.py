@@ -1,23 +1,38 @@
 import bisect
+from typing import (
+    List,
+    Range,
+)
+
+from . import SignatureToRangeList
 
 
 class SubsequenceIndex:
-    """Create index from all subsequences consisting of k characters
-    spaced ival positions apart.  E.g., SubseqIndex("ATAT", 2, 2)
-    extracts ("AA", 0) and ("TT", 1)."""
+    """Create index from all subsequences matching a signature like "x___x", where:
+    "x" marks a position to be included (+) in the index
+    "_" marks a position to be excluded (-) from the index
 
-    def __init__(self, text, subsequence_length, step, mismatches_allowed=2):
-        self.subsequence_length = subsequence_length
-        self.step = step  # 1=adjacent, 2=every other, etc
-        self.mismatches_allowed = mismatches_allowed
+    All the other literals are illegal.
+
+    Valid signature examples:
+    xx__xx, x_x_x, x___xx
+
+    Leading and trailing "_" will be automatically ignored ("___x_xx__" becomes "x_xx").
+    """
+
+    def __init__(self, text, signature, mismatches_allowed=2):
         self.text = text
-        self.index = self._prepare_index(text)
+        self.mismatches_allowed = mismatches_allowed
 
-    PATTERN_LENGTH = 24
+        if set(signature) != {"x", "_"}:
+            raise TypeError("Signature may only consist of 'x' and '_'")
+        else:
+            self.signature = signature.strip("_")
+            self.ranges_to_store = SignatureToRangeList()(self.signature)
+
+        self.index = self._prepare_index(text, self.ranges_to_store)
 
     def query(self, pattern):
-        assert len(pattern) == self.PATTERN_LENGTH
-
         matches = set()
         total_hits = 0
 
@@ -50,14 +65,16 @@ class SubsequenceIndex:
             i += 1
         return hits
 
-    def _prepare_index(self, text):
+    def _prepare_index(self, text: str, signature: str, ranges: List[Range]):
         index = []
 
-        self.span = 1 + self.step * (self.subsequence_length - 1)
-        for i in range(len(text) - self.span + 1):  # for each subseq
-            index.append(
-                (text[i : i + self.span : self.step], i)
-            )  # add (subseq, offset)
+        for i in range(len(text) - len(signature) + 1):  # for each subseq
+
+            new_entry = ""
+            for range in ranges:
+                new_entry += text[int(range.start) : int(range.stop)]
+
+            index.append((new_entry, i))  # add (subseq, offset)
         index.sort()  # alphabetize by subseq
 
         return index

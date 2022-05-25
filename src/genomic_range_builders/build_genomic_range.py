@@ -3,9 +3,6 @@ from src.dataclasses import (
     GenomicRange,
     RestrictionEnzyme,
 )
-from src.restriction_enzyme_marks.restriction_enzyme_presence import (
-    RestrictionEnzymePresence,
-)
 
 
 class BuildGenomicRange:
@@ -25,15 +22,6 @@ class BuildGenomicRange:
             start=round(start),
             width=round(width),
             strand=None,
-            color=self._test_output_color(
-                genome, restriction_enzyme, tolerance_as_fraction_of_genome_length
-            ),
+            color=COLORS.miss,
             text_label=restriction_enzyme.name,
-        )
-
-    def _test_output_color(self, genome, enzyme, tolerance):
-        return (
-            COLORS.miss
-            if RestrictionEnzymePresence()(genome, enzyme, tolerance)
-            else COLORS.miss
         )

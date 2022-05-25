@@ -1,14 +1,16 @@
 from dataclasses import astuple
 from matplotlib import pyplot as plt
 
+
 from .config_the_analysis import THE_CONFIG
-from src.genomic_range_builders import BuildGenomicRangeList
 from src.genome_browser_overrides import (
     OverridenGenomeDiagram,
     GeneticStructureFeature,
     RestrictionEnzymeCheckOutputFeature,
 )
+from src.genomic_range_builders import BuildGenomicRangeList
 from src.loaders import SoleSequenceFromFastaFile
+from src.restriction_enzyme_marks import RunBatteryOfRangeTests
 
 genome_length = 29903
 g = OverridenGenomeDiagram()
@@ -26,9 +28,7 @@ g.add_track(track)
 # Plot locations from patent
 genome = SoleSequenceFromFastaFile()(THE_CONFIG.genome_under_test.fasta_file_path)
 track = RestrictionEnzymeCheckOutputFeature(f"Restriction enzymes", height_ratio=0.4)
-for genomic_range in BuildGenomicRangeList().from_locations_in_patent(
-    genome, tolerance_as_fraction_of_genome_length=0.05
-):
+for genomic_range in RunBatteryOfRangeTests()(genome, mismatches_allowed=1):
     track.add_feature(astuple(genomic_range))
 g.add_track(track)
 

@@ -6,7 +6,7 @@ from ..constants import (
     RESTRICTION_ENZYMES,
 )
 from ..dataclasses import GenomicRange
-from . import BuildGenomicRange
+from .build_genomic_range import BuildGenomicRange
 
 
 class BuildGenomicRangeList:
