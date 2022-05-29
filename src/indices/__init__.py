@@ -1,2 +1,2 @@
 from .kmer_index import KmerIndex
-from .subsequence_index import *
+from .kmer_gap_kmer_index import KmerGapKmerIndex

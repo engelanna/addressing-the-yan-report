@@ -1,6 +1,6 @@
 from pytest import fixture
 
-from src.indices import SubsequenceIndex
+from src.indices import KmerGapKmerIndex
 
 
 class TestSubsequenceIndex:
@@ -21,9 +21,7 @@ class TestSubsequenceIndex:
         pattern="to-morrow and to-morrow ",
         text="to-morrow and to-morrow and to-morrow creeps in this petty pace",
     ):
-        matches = SubsequenceIndex(text=text, subsequence_length=8, step=3).query(
-            pattern
-        )[0]
+        matches = KmerGapKmerIndex(text=text, kmer_length=8, step=3).query(pattern)[0]
 
         assert matches == [0, 14]
 
@@ -32,16 +30,14 @@ class TestSubsequenceIndex:
         pattern="to-morrow and to-morrow ",
         text="to-morrow and to-morrow and to-morrow creeps in this petty pace",
     ):
-        hit_count = SubsequenceIndex(text=text, subsequence_length=8, step=3).query(
-            pattern
-        )[1]
+        hit_count = KmerGapKmerIndex(text=text, kmer_length=8, step=3).query(pattern)[1]
         assert hit_count == 6
 
     def test_how_many_times_alu_matches_human_chromosome1(
         self, human_chromosome_1, human_alu
     ):
-        matches = SubsequenceIndex(
-            text=human_chromosome_1, subsequence_length=8, step=3
+        matches = KmerGapKmerIndex(
+            text=human_chromosome_1, kmer_length=8, step=3
         ).query(human_alu)[0]
 
         assert matches == [
@@ -63,8 +59,8 @@ class TestSubsequenceIndex:
     def test_index_hits_while_matching_alu_to_human_chromosome1(
         self, human_chromosome_1, human_alu
     ):
-        hit_count = SubsequenceIndex(
-            text=human_chromosome_1, subsequence_length=8, step=3
+        hit_count = KmerGapKmerIndex(
+            text=human_chromosome_1, kmer_length=8, step=3
         ).query(human_alu)[1]
 
         assert hit_count == 79
