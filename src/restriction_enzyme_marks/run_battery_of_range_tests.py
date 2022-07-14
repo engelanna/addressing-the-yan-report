@@ -5,7 +5,6 @@ from . import RestrictionEnzymePresence
 class RunBatteryOfRangeTests:
     def __init__(self):
         self.restriction_enzyme_presence = RestrictionEnzymePresence()
-        self.enzymes_need
 
     def __call__(self, genome: str, mismatches_allowed: int = 0):
         # find all ClaI -> then the next ones

@@ -1,5 +1,7 @@
 class SoleSequenceFromFastaFile:
-    """Accepts a single entry FASTA file => discards the header, returning the sequence.
+    """Accepts a single-entry FASTA file
+    => discards the header, returning just the sequence.
+
     Raises AssertionError when the FASTA file is multi-sequence.
     """
 

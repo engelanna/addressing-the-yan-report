@@ -24,13 +24,12 @@ class BuildGenomicRangeList:
     def from_locations_in_patent(
         self, genome: str, tolerance_as_fraction_of_genome_length: float = 0.05
     ) -> List[GenomicRange]:
-
         ranges = []
-        for enzyme in RESTRICTION_ENZYMES:
 
+        for enzyme in RESTRICTION_ENZYMES:
             a_single_range = self.build_genomic_range.at_fraction_of_genome_length(
                 genome, enzyme, tolerance_as_fraction_of_genome_length
             )
-
             ranges.append(a_single_range)
+
         return ranges
