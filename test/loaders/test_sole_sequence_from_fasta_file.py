@@ -7,7 +7,7 @@ class TestSoleSequenceFromFastaFile:
     def test_length_of_the_only_sequence(
         self,
         file_path=THE_CONFIG.genome_under_test.fasta_file_path,
-        expected_length=29903,
+        expected_length=30473,
     ):
         actual_length = len(SoleSequenceFromFastaFile()(file_path))
 
