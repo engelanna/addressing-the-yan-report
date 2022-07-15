@@ -34,7 +34,7 @@ RESTRICTION_ENZYMES = (
     ),
     RestrictionEnzyme(
         start_at_fraction_genome_length=0.819478623017831,
-        name="ORF3A transcription start element",
+        name="ORF3A TSE",
         sequence="ACTAAAC",
     ),
     RestrictionEnzyme(
@@ -74,7 +74,7 @@ RESTRICTION_ENZYMES = (
     ),
     RestrictionEnzyme(
         start_at_fraction_genome_length=0.931710347396385,
-        name="Eam1101 (AhdI isoschizomer)",
+        name="AhdI",
         sequence="GACNNNNNGTC",
     ),
     RestrictionEnzyme(

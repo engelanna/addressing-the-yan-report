@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "us7279327b2-patent-detector"
+name = "verifying-sars-cov-2-origin-hypotheses"
 version = "0.1.0"
-description = "Two adventures in critical thinking about SARS-CoV-2 misinformation"
+description = "Verifying SARS-CoV-2 origin hypotheses w/ basic genomics"
 authors = ["Anna Engel <anna.julia.engel@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-genome-browser = {git = "https://github.com/engelanna/genome-browser.git", branch = "feature/specify-deps-with-poetry"}
+genome-browser = {git = "https://github.com/clintval/genome-browser.git", rev = "d073811"}
 numpy = "^1.22.3"
 python = ">=3.8,<3.11"
 matplotlib = "^3.5.2"
