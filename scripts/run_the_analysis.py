@@ -12,7 +12,6 @@ from src.genomic_range_builders import BuildGenomicRangeList
 from src.loaders import SoleSequenceFromFastaFile
 from src.restriction_enzyme_marks import RunBatteryOfRangeTests
 
-genome_length = 29903
 g = OverridenGenomeDiagram()
 
 # Plot SARS-CoV-2
