@@ -12,7 +12,7 @@ import matplotlib.patches as patches
 import numpy as np
 
 
-class GeneticStructureFeature(Feature):
+class GeneticStructureRow(Feature):
     """
     Adds text labels to genomic intervals.
     Changes step to 1k.

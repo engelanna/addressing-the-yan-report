@@ -74,3 +74,7 @@ comb(  # number of combinations
 https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/
 
 Note: Yan et al measured from the beginning of the spike gene, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
+
+1. Colours
+2. Padding
+3. Label levels

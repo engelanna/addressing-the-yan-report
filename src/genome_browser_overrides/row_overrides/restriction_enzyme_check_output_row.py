@@ -11,8 +11,10 @@ from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
+from src.constants import COLORS
 
-class NoRestrictionEnzymeCheckFeature(Feature):
+
+class RestrictionEnzymeCheckOutputRow(Feature):
     """
     Adds text labels to genomic intervals.
     Changes step to 1k.
@@ -70,14 +72,14 @@ class NoRestrictionEnzymeCheckFeature(Feature):
                     linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
-                    fill=False,
-                    color="orange",
+                    fill=True,
+                    color=color,
                 )
             )
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
-                color="blue",
+                color="black",
                 ha="center",
                 va="center_baseline",
                 rotation=45,
@@ -88,6 +90,6 @@ class NoRestrictionEnzymeCheckFeature(Feature):
         ax = despine(ax_off(ax, axis="y"))
 
         # Adjust y-limits to include padding, scales with the number of levels.
-        ax.set_ylim((0) * (max(levels) + 1) / 2, max(levels) + 1)
+        ax.set_ylim((0 - PADDING) * (max(levels) + 1) / 2, max(levels) + 1)
         ax.set_xlim(*self.xlim)
         return ax
