@@ -1,7 +1,7 @@
 from dataclasses import astuple
 from matplotlib import pyplot as plt
 
-from .config_the_analysis import THE_CONFIG
+from .config_the_analyses import THE_CONFIG
 from src.genome_browser_overrides import (
     OverridenGenomeDiagram,
     GeneticStructureFeature,

@@ -29,7 +29,7 @@ Two restriction enzymes (sequences bacteria use to slash virii to bits, repurpos
 
 <br>Viewing [the isolate at _NCBI Virus_](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049&IsolateParsed_s=Wuhan-Hu-1), the absolutely earliest accession (unique sequence identifier) is [MN908947.1](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), collected in Dec 2019 :arrow_right: submitted 2020-01-05 :arrow_right: released 2020-01-12.
 
-<br>That's 2 months until the World Health Organization would declare COVID-19 a pandemic :rotating_light:☣️:rotating_light: (2020-03-11).
+<br>That's 2 months until the World Health Organization would declare COVID-19 a pandemic ☣️ (2020-03-11).
 
 ---
 
@@ -39,7 +39,7 @@ Switching to the FASTA format (a text format often used to store full genomes) a
 
 ![Downloading](https://user-images.githubusercontent.com/13955209/179091431-050a1882-24e8-4591-b176-d2d905f269aa.png)
 
-As far as genomes go, this one's really tiny: a hundred thousand times shorter than a human one. A single human cell's genome would consume __at the very least__ 3.3 GB of your hard drive, and you have ~37 trillion of those :scream:
+As far as genomes go, this one's really tiny: a hundred thousand times shorter than a human one. A single human cell's genome would consume __at the very least__ 3.3 GB of your hard drive, you having ~37 trillion of those :see_no_evil: (luckily, only one is usually needed).
 
 ---
 
@@ -53,7 +53,7 @@ As far as genomes go, this one's really tiny: a hundred thousand times shorter t
 
 ## Are EcoRI and BstEII _actually there_? :mag::eyes: (2 of 3)
 
-<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for computing the __approximate__ probability of a k-mer (word of size k) happening in a text __by random chance alone__.
+<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for computing the __approximate__ probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
 <br>
 ```python
 comb(  # number of combinations
