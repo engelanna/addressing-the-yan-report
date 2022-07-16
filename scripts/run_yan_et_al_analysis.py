@@ -18,23 +18,21 @@ track = NoRestrictionEnzymeCheckRow(
     THE_CONFIG.sars_cov_2_structure_diagram.title, height_ratio=0.4
 )
 
-for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
-    THE_CONFIG.sars_cov_2_structure_diagram.genes_bed_file
-):
+[
     track.add_feature(astuple(genomic_range))
+    for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
+        THE_CONFIG.sars_cov_2_structure_diagram.genes_bed_file
+    )
+]
+[
+    track.add_feature(astuple(genomic_range))
+    for genomic_range in BuildGenomicRangeList().from_search_results(
+        genome,
+        NonoverlappingOccurrencesOfSequenceInGenome(genome)("GAATTC")
+        + NonoverlappingOccurrencesOfSequenceInGenome(genome)("GGTNACC"),
+    )
+]
 
-# Plot search results
-for genomic_range in BuildGenomicRangeList().from_search_results(
-    genome,
-    NonoverlappingOccurrencesOfSequenceInGenome(genome)("GAATTC"),
-):
-    track.add_feature(astuple(genomic_range))
-
-for genomic_range in BuildGenomicRangeList().from_search_results(
-    genome,
-    NonoverlappingOccurrencesOfSequenceInGenome(genome)("GGTNACC"),
-):
-    track.add_feature(astuple(genomic_range))
 
 diagram = OverridenGenomeDiagram()
 diagram.add_track(track)
