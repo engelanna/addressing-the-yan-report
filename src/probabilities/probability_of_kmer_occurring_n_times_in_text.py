@@ -2,8 +2,8 @@ from math import comb
 
 
 class ProbabilityOfKmerOccurringNTimesInText:
-    def __init__(self, alphabet_size: int):
-        self.alphabet_size = 4
+    def __init__(self, alphabet_size: int = 4):
+        self.alphabet_size = alphabet_size
 
     def __call__(self, text_length: int, kmer_length: int, kmer_occurrence_count: int):
         count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length = (

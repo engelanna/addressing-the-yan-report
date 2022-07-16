@@ -71,13 +71,13 @@ class GeneticStructureFeature(Feature):
                     closed=True,
                     alpha=ALPHA,
                     fill=False,
-                    color="orange",
+                    color="navy",
                 )
             )
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
-                color="blue",
+                color="orange",
                 ha="center",
                 va="center_baseline",
                 rotation=45,

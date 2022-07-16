@@ -2,13 +2,13 @@
 marp: true
 ---
 
-# Case 1: [The Yan report](https://zenodo.org/record/4028830#.X1_bxGhKg2y)
+# Trial 1: [The Yan report](https://zenodo.org/record/4028830#.X1_bxGhKg2y)
 
-In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :raised_eyebrow: Zenodo granting it a Digital Object Identifier (DOI) made the report appear somewhat credible, despite not having had been peer-reviewed.
+In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :fearful: Zenodo granting it a Digital Object Identifier (DOI) made the report appear credible, despite the lack of peer review.
 
-<br>The Johns Hopkins University readily countered with a [page-by-page account](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) of why they found the report unconvincing. Alas, neither their authority, nor having to read a mountain of references, were going to appeal to the conspiratorial part of the audience :thinking:
+<br>The Johns Hopkins University countered with a [page-by-page account](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) of why they found the report unconvincing. However, neither their authority, nor having to read a mountain of references, would appeal to the conspiratorial part of the audience :raised_eyebrow:
 
-<br>Critical thinking only requires that the core claim be verified - when that turns out to be false, anything derived from it automatically becomes false as well :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum abroad?
+<br>Critical thinking only requires that the core claim be verified - should that turn out to be false, anything derived from it automatically becomes false as well :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum abroad?
 
 ---
 
@@ -39,9 +39,19 @@ Switching to the FASTA format (a text format often used to store full genomes) a
 
 ![Downloading](https://user-images.githubusercontent.com/13955209/179091431-050a1882-24e8-4591-b176-d2d905f269aa.png)
 
-As far as genomes go, this one's really tiny: a hundred thousand times shorter than a human one. A single human cell's genome would consume __at the very least__ 3.3 GB of your hard drive, and you have ~37 trillion of those :scream_cat:
+As far as genomes go, this one's really tiny: a hundred thousand times shorter than a human one. A single human cell's genome would consume __at the very least__ 3.3 GB of your hard drive, and you have ~37 trillion of those :scream:
 
 ---
 
-## Are EcoRI and BstEII _actually there_? :mag::eyes:
+## Are EcoRI and BstEII _actually there_? :mag::eyes: (1 of 3)
 
+<br>You can open the downloaded SARS-CoV-2 genome in a text editor :page_with_curl:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grinning:
+
+<br>The __N__ (= whichever letter) in [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information)'s __GTTNACC__ is a tad more problematic, though. If you can locate _regular expression mode_ (look for a button marked `.*`) :crossed_fingers:, this hurdle can be cleared by inputting __GGT[ACGT]ACC__.
+
+---
+
+## Are EcoRI and BstEII _actually there_? :mag::eyes: (2 of 3)
+
+
+<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) brings us 
