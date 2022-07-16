@@ -1,7 +1,7 @@
 from pytest import fixture
 
 from src.loaders import SoleSequenceFromFastaFile
-from scripts.config_the_analysis import THE_CONFIG
+from scripts.config_the_analyses import THE_CONFIG
 
 
 @fixture

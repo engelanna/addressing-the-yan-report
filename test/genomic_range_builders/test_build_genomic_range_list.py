@@ -1,5 +1,5 @@
 from src.genomic_range_builders import BuildGenomicRangeList
-from scripts.config_the_analysis import THE_CONFIG
+from scripts.config_the_analyses import THE_CONFIG
 
 
 class TestBuildGenomicRangeList:

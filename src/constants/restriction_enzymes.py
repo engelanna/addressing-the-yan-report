@@ -9,7 +9,7 @@ RESTRICTION_ENZYMES_YAN_ET_AL = (
     RestrictionEnzyme(
         start_at_fraction_genome_length=None,
         name="BstEII",
-        sequence="GTTNACC",
+        sequence="GGTNACC",
     ),
 )
 

@@ -6,13 +6,13 @@ marp: true
 
 In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :fearful: Zenodo granting it a Digital Object Identifier (DOI) made the report appear credible, despite the lack of peer review.
 
-<br>The Johns Hopkins University countered with a [page-by-page account](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) of why they found the report unconvincing. However, neither their authority, nor having to read a mountain of references, would appeal to the conspiratorial :raised_eyebrow: part of the audience.
+<br>The Johns Hopkins University [made up for that lack](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) the same month, explaining why the report was unconvincing. However, neither authority, nor having to read through a heap of references, are arguments that appeal to conspiratorial audiences :raised_eyebrow::raised_eyebrow:.
 
-<br>Critical thinking only requires that __the core claim__ be verified - should _that_ turn out to be false, anything derived from it automatically becomes false as well :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum in the USA?
+<br>Critical thinking only requires that __the core claim__ be verified - should _that_ turn out to be statistically insignificant, any deductions may safely be disregarded :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum in the USA?
 
 ---
 
-## Restriction enzymes around the spike protein receptor binding motif
+## Restriction enzymes around the spike protein's receptor binding motif
 
 Mikolaj Raszek, PhD, was kind enough to elucidate, in [SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
 
@@ -35,25 +35,26 @@ Two restriction enzymes (sequences bacteria use to slash virii to bits, repurpos
 
 ## Download the earliest known SARS-CoV-2 genome :arrow_down: (2 of 2)
 
-Switching to the FASTA format (a text format often used to store full genomes) allows us to download the troublemaker's genome:
+In the accession page, switching to the FASTA format (a text format often used for storing reference genomes) allows us to download the troublemaker's genome:
 
 ![Downloading](https://user-images.githubusercontent.com/13955209/179091431-050a1882-24e8-4591-b176-d2d905f269aa.png)
 
-As far as genomes go, this one's really tiny: a hundred thousand times shorter than a human one. A single human cell's genome would consume __at the very least__ 3.3 GB of your hard drive, you having ~37 trillion of those :see_no_evil: (luckily, only one is usually needed).
+~30k bases (a base is one of `A, C, G, T`) long? What a tiny genome. A human one is 3.1 billion bases, with a single cell taking up between 3.3 GB (reference genome, a measurement standard) and 70 GB (non-reference genome) of your hard drive :see_no_evil:
 
 ---
 
-## Are EcoRI and BstEII _actually there_? :mag::eyes: (1 of 3)
+## Are EcoRI and BstEII _actually there_? :mag::eyes:
 
-<br>You can open the downloaded SARS-CoV-2 genome in a text editor :clipboard:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grinning:
+<br>You can open the downloaded SARS-CoV-2 genome in a text editor :clipboard:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grin:
 
-<br>The __N__ (= whichever letter) in [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information)'s __GTTNACC__ is a tad more problematic, though. If you can locate _regular expression mode_ (look for a button marked `.*`) :crossed_fingers:, this hurdle can be cleared by inputting __GGT[ACGT]ACC__.
+<br>The __N__ (= whichever base) in [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information)'s __GGTNACC__ is a tad more problematic, though. If you can locate _regular expression mode_ (look for a button marked `.*`) :crossed_fingers:, this hurdle can be cleared by inputting __GGT[ACGT]ACC__.
 
 ---
 
-## Are EcoRI and BstEII _actually there_? :mag::eyes: (2 of 3)
+## Plotting the restriction enzymes
 
-<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for computing the __approximate__ probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
+
+<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for approximating the probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
 <br>
 ```python
 comb(  # number of combinations
@@ -68,7 +69,8 @@ comb(  # number of combinations
 / pow(self.alphabet_size, text_length)
 ```
 
-
 <br>Here's [the Python version](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) should you prefer it to mathematical gobbledygook. Giving it a spin:
 
 https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/
+
+Note: Yan et al measured from the beginning of the spike gene, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
