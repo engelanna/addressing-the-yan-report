@@ -2,6 +2,7 @@ from src.constants import COLORS
 from src.dataclasses import (
     GenomicRange,
     RestrictionEnzyme,
+    SequenceOccurrence,
 )
 
 
@@ -24,4 +25,13 @@ class BuildGenomicRange:
             strand=None,
             color=COLORS.miss,
             text_label=restriction_enzyme.name,
+        )
+
+    def at_sequence_occurrence_coordinates(self, occurrence: SequenceOccurrence):
+        return GenomicRange(
+            start=occurrence.span[0],
+            width=occurrence.span[1] - occurrence.span[0],
+            strand=None,
+            color=COLORS.hit,
+            text_label=occurrence.sequence,
         )

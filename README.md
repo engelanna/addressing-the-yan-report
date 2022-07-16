@@ -6,9 +6,9 @@ marp: true
 
 In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :fearful: Zenodo granting it a Digital Object Identifier (DOI) made the report appear credible, despite the lack of peer review.
 
-<br>The Johns Hopkins University countered with a [page-by-page account](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) of why they found the report unconvincing. However, neither their authority, nor having to read a mountain of references, would appeal to the conspiratorial part of the audience :raised_eyebrow:
+<br>The Johns Hopkins University countered with a [page-by-page account](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) of why they found the report unconvincing. However, neither their authority, nor having to read a mountain of references, would appeal to the conspiratorial :raised_eyebrow: part of the audience.
 
-<br>Critical thinking only requires that the core claim be verified - should that turn out to be false, anything derived from it automatically becomes false as well :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum abroad?
+<br>Critical thinking only requires that __the core claim__ be verified - should _that_ turn out to be false, anything derived from it automatically becomes false as well :woman_shrugging: What was the postulate, then, that sufficed for its authors to be able to seek asylum in the USA?
 
 ---
 
@@ -27,9 +27,9 @@ Two restriction enzymes (sequences bacteria use to slash virii to bits, repurpos
 
 <br>![Aaa](https://user-images.githubusercontent.com/13955209/179288273-5f752b8d-1ed1-4a64-bf0d-61e9d792fe59.png)
 
-<br>Viewing [the isolate at _NCBI Virus_](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049&IsolateParsed_s=Wuhan-Hu-1), the absolutely earliest accession (unique sequence identifier) is [MN908947.1](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), submitted on 2020-01-05.
+<br>Viewing [the isolate at _NCBI Virus_](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049&IsolateParsed_s=Wuhan-Hu-1), the absolutely earliest accession (unique sequence identifier) is [MN908947.1](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), collected in Dec 2019 :arrow_right: submitted 2020-01-05 :arrow_right: released 2020-01-12.
 
-<br>That's over 2 months until the World Health Organization would declare COVID-19 a pandemic ☣️ (2020-03-11).
+<br>That's 2 months until the World Health Organization would declare COVID-19 a pandemic :rotating_light:☣️:rotating_light: (2020-03-11).
 
 ---
 
@@ -45,7 +45,7 @@ As far as genomes go, this one's really tiny: a hundred thousand times shorter t
 
 ## Are EcoRI and BstEII _actually there_? :mag::eyes: (1 of 3)
 
-<br>You can open the downloaded SARS-CoV-2 genome in a text editor :page_with_curl:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grinning:
+<br>You can open the downloaded SARS-CoV-2 genome in a text editor :clipboard:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grinning:
 
 <br>The __N__ (= whichever letter) in [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information)'s __GTTNACC__ is a tad more problematic, though. If you can locate _regular expression mode_ (look for a button marked `.*`) :crossed_fingers:, this hurdle can be cleared by inputting __GGT[ACGT]ACC__.
 
@@ -53,5 +53,22 @@ As far as genomes go, this one's really tiny: a hundred thousand times shorter t
 
 ## Are EcoRI and BstEII _actually there_? :mag::eyes: (2 of 3)
 
+<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for computing the __approximate__ probability of a k-mer (word of size k) happening in a text __by random chance alone__.
+<br>
+```python
+comb(  # number of combinations
+    count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length
+    + kmer_occurrence_count,
+    kmer_occurrence_count,
+)
+* pow(
+    self.alphabet_size,
+    count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length,
+)
+/ pow(self.alphabet_size, text_length)
+```
 
-<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) brings us 
+
+<br>Here's [the Python version](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) should you prefer it to mathematical gobbledygook. Giving it a spin:
+
+https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/

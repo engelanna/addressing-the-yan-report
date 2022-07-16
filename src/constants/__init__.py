@@ -1,2 +1,2 @@
 from .colors import COLORS
-from .restriction_enzymes import RESTRICTION_ENZYMES
+from .restriction_enzymes import RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA

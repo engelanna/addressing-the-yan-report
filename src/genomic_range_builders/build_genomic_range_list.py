@@ -1,12 +1,15 @@
 import pandas as pd
 from typing import List
 
-from ..constants import (
-    COLORS,
-    RESTRICTION_ENZYMES,
-)
-from ..dataclasses import GenomicRange
 from .build_genomic_range import BuildGenomicRange
+from src.constants import (
+    COLORS,
+    RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA,
+)
+from src.dataclasses import (
+    GenomicRange,
+    SequenceOccurrence,
+)
 
 
 class BuildGenomicRangeList:
@@ -26,10 +29,18 @@ class BuildGenomicRangeList:
     ) -> List[GenomicRange]:
         ranges = []
 
-        for enzyme in RESTRICTION_ENZYMES:
+        for enzyme in RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA:
             a_single_range = self.build_genomic_range.at_fraction_of_genome_length(
                 genome, enzyme, tolerance_as_fraction_of_genome_length
             )
             ranges.append(a_single_range)
 
         return ranges
+
+    def from_search_results(
+        self, genome: str, sequence_occurrences: List[SequenceOccurrence]
+    ):
+        return [
+            self.build_genomic_range.at_sequence_occurrence_coordinates(occurrence)
+            for occurrence in sequence_occurrences
+        ]

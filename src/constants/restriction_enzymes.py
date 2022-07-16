@@ -1,7 +1,19 @@
 from src.dataclasses.restriction_enzyme import RestrictionEnzyme
 
+RESTRICTION_ENZYMES_YAN_ET_AL = (
+    RestrictionEnzyme(
+        start_at_fraction_genome_length=None,
+        name="EcoRI",
+        sequence="GAATTC",
+    ),
+    RestrictionEnzyme(
+        start_at_fraction_genome_length=None,
+        name="BstEII",
+        sequence="GTTNACC",
+    ),
+)
 
-RESTRICTION_ENZYMES = (
+RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA = (
     RestrictionEnzyme(
         start_at_fraction_genome_length=0.23765735409638497,
         name="BglI",
@@ -34,7 +46,7 @@ RESTRICTION_ENZYMES = (
     ),
     RestrictionEnzyme(
         start_at_fraction_genome_length=0.819478623017831,
-        name="ORF3A TSE",
+        name="ORF3 TSE",
         sequence="ACTAAAC",
     ),
     RestrictionEnzyme(
