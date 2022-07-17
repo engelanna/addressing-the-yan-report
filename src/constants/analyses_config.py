@@ -9,6 +9,9 @@ ANALYSES_CONFIG = OpenStruct(
         diagram_title="M&M TITLE SARS-CoV-2 (accession MN908947.1) genes",
     ),
     yan_et_al=OpenStruct(
-        diagram_title="YAN TITLE SARS-CoV-2 (accession MN908947.1) genes",
+        diagram_title=(
+            "EcoRI & BstEII restriction enzyme locations\n"
+            "in the SARS-CoV-2 (accession MN908947.1) genome"
+        )
     ),
 )

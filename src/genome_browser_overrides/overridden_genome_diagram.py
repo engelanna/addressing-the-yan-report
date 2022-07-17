@@ -91,6 +91,6 @@ class OverridenGenomeDiagram(GenomeDiagram):
                     va="top",
                     ha="center",
                     annotation_clip=False,
-                    weight="bold",
+                    style="italic",
                 )
         return fig, axes

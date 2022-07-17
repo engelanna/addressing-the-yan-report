@@ -15,7 +15,11 @@ genome = SoleSequenceFromFastaFile()(
 )
 
 # Plot SARS-CoV-2
-track = DiagramRow(ANALYSES_CONFIG.yan_et_al.diagram_title, height_ratio=0.4)
+track = DiagramRow(
+    ANALYSES_CONFIG.yan_et_al.diagram_title,
+    height_ratio=0.4,
+    drawing_config={"padding": 0},
+)
 
 [
     track.add_feature(astuple(genomic_range))

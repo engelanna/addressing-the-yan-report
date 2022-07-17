@@ -17,14 +17,15 @@ class DiagramRow(Feature):
     Changes step to 1k.
     """
 
-    def __init__(self, name=None, height_ratio=1, drawing_config: OpenStruct = None):
+    def __init__(self, name=None, height_ratio=1, drawing_config: dict = None):
         Feature.__init__(self, name, height_ratio)
         self.step = 1000
-        self.drawing_config = OpenStruct(
-            fill_polygons=False,
-            annotation_color="blue",
-            padding=0.3,
-        )
+        self.drawing_config = {
+            "fill_polygons": False,
+            "annotation_color": "slategrey",
+            "padding": 0.3,
+            **(drawing_config or {}),
+        }
 
     @property
     def xlim(self):
@@ -37,7 +38,7 @@ class DiagramRow(Feature):
             ax = plt.gca()
 
         # Height of the features is some percent less than one.
-        height = 1 / (self.drawing_config.padding + 1)
+        height = 1 / (self.drawing_config["padding"] + 1)
 
         # The non-overlapping disjoint intervals are computed using the
         # logic which priortizes first position of interval, then length.
@@ -63,14 +64,14 @@ class DiagramRow(Feature):
                     linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
-                    fill=self.drawing_config.fill_polygons,
+                    fill=self.drawing_config["fill_polygons"],
                     color=color,
                 )
             )
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
-                color=self.drawing_config.annotation_color,
+                color=self.drawing_config["annotation_color"],
                 ha="center",
                 va="center_baseline",
                 rotation=45,
@@ -80,9 +81,10 @@ class DiagramRow(Feature):
         # For features, remove y-axis by default.
         ax = despine(ax_off(ax, axis="y"))
 
-        # Adjust y-limits to include self.drawing_config.padding, scales with the number of levels.
+        # Adjust y-limits to include self.drawing_config["padding, scales with the number of levels.
         ax.set_ylim(
-            (0 - self.drawing_config.padding) * (max(levels) + 1) / 2, max(levels) + 1
+            (0 - self.drawing_config["padding"]) * (max(levels) + 1) / 2,
+            max(levels) + 1,
         )
         ax.set_xlim(*self.xlim)
         return ax
