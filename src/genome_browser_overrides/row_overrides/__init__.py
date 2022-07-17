@@ -1,3 +1,0 @@
-from .genetic_structure_row import GeneticStructureRow
-from .restriction_enzyme_check_output_row import RestrictionEnzymeCheckOutputRow
-from .no_restriction_enzyme_check_row import NoRestrictionEnzymeCheckRow

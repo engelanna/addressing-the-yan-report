@@ -51,10 +51,11 @@ In the accession page, switching to the FASTA format (a text format often used f
 
 ---
 
-## Plotting the restriction enzymes
+## But where exactly? Plotting.
 
 
-<br>[Bioinformatics algorithms: An active learning approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for approximating the probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
+<br>[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for approximating the probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
+
 <br>
 ```python
 comb(  # number of combinations
