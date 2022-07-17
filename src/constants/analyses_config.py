@@ -1,9 +1,14 @@
 from ostruct import OpenStruct
 
 ANALYSES_CONFIG = OpenStruct(
-    sars_cov_2_structure_diagram=OpenStruct(
-        genes_bed_file="assets/bed/sars_cov_2_genes_for_diagram.bed",
-        title="SARS-CoV-2 (accession MN908947.1) genes",
+    common=OpenStruct(
+        sars_cov_2_gene_ranges_bed_file_path="assets/bed/sars_cov_2_genes_for_diagram.bed",
+        sars_cov_2_genome_fasta_path="assets/fasta/MN908947.1.fasta",
     ),
-    genome_under_test=OpenStruct(fasta_file_path="assets/fasta/MN908947.1.fasta"),
+    martin_and_mercola=OpenStruct(
+        diagram_title="M&M TITLE SARS-CoV-2 (accession MN908947.1) genes",
+    ),
+    yan_et_al=OpenStruct(
+        diagram_title="YAN TITLE SARS-CoV-2 (accession MN908947.1) genes",
+    ),
 )

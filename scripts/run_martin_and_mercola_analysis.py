@@ -13,12 +13,12 @@ from src.restriction_enzyme_marks import RunBatteryOfRangeTests
 
 
 sars_cov_2_structure_row = DiagramRow(
-    ANALYSES_CONFIG.sars_cov_2_structure_diagram.title, height_ratio=0.4
+    ANALYSES_CONFIG.martin_and_mercola.diagram_title, height_ratio=0.4
 )
 [
     sars_cov_2_structure_row.add_feature(astuple(genomic_range))
     for genomic_range in BuildGenomicRangeList().from_sars_cov_2_bed_file(
-        ANALYSES_CONFIG.sars_cov_2_structure_diagram.genes_bed_file
+        ANALYSES_CONFIG.common.sars_cov_2_gene_ranges_bed_file_path
     )
 ]
 
@@ -31,7 +31,7 @@ restriction_enzymes_row = DiagramRow(
     restriction_enzymes_row.add_feature(astuple(genomic_range))
     for genomic_range in RunBatteryOfRangeTests()(
         genome=SoleSequenceFromFastaFile()(
-            ANALYSES_CONFIG.genome_under_test.fasta_file_path
+            ANALYSES_CONFIG.common.sars_cov_2_genome_fasta_path
         ),
         mismatches_allowed=1,
     )
