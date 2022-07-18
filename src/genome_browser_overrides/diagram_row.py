@@ -10,6 +10,8 @@ from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
+from src.constants import COLOR_FROM_RESTRICTION_ENZYME_NAME
+
 
 class DiagramRow(Feature):
     """
@@ -22,7 +24,6 @@ class DiagramRow(Feature):
         self.step = 1000
         self.drawing_config = {
             "fill_polygons": False,
-            "annotation_color": "slategrey",
             "padding": 0.0025,
             **(drawing_config or {}),
         }
@@ -82,7 +83,7 @@ class DiagramRow(Feature):
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
-                color=self.drawing_config["annotation_color"],
+                color=COLOR_FROM_RESTRICTION_ENZYME_NAME(text_label),
                 ha="center",
                 va="center_baseline",
                 rotation=45,

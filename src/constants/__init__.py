@@ -1,6 +1,7 @@
 from .analyses_config import ANALYSES_CONFIG
 from .colors import (
     COLORS,
+    COLOR_FROM_RESTRICTION_ENZYME_NAME,
     COLOR_FROM_RESTRICTION_ENZYME_SEQUENCE,
 )
 from .restriction_enzymes import (
