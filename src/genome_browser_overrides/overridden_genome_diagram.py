@@ -89,11 +89,12 @@ class OverridenGenomeDiagram(GenomeDiagram):
                     track.name,
                     xy=(
                         ax.get_xlim()[1] / 2,
-                        ax.get_ylim()[1] * 1.1,
+                        ax.get_ylim()[1] * 1.25,
                     ),
                     va="top",
                     ha="center",
                     annotation_clip=False,
-                    style="italic",
+                    # style="italic,
+                    weight="bold",
                 )
         return fig, axes

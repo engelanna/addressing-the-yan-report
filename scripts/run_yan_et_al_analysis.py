@@ -18,7 +18,10 @@ genome = SoleSequenceFromFastaFile()(
 
 sars_cov_2_genetic_structure_row = DiagramRow(
     ANALYSES_CONFIG.yan_et_al.diagram_title,
-    drawing_config={"annotation_color": COLORS.structure_annotation},
+    drawing_config={
+        "annotation_color": COLORS.structure_annotation,
+        "fill_polygons": True,
+    },
 )
 [
     sars_cov_2_genetic_structure_row.add_feature(astuple(genomic_range))
@@ -43,4 +46,5 @@ diagram.add_track(sars_cov_2_genetic_structure_row)
 diagram.add_track(restriction_enzymes_row)
 
 _fig, _axes = diagram.draw()
+
 plt.show()
