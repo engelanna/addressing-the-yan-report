@@ -2,14 +2,8 @@ import pandas as pd
 from typing import List
 
 from .build_genomic_range import BuildGenomicRange
-from src.constants import (
-    COLORS,
-    RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA,
-)
-from src.dataclasses import (
-    GenomicRange,
-    SequenceOccurrence,
-)
+from src.constants import COLORS, RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA
+from src.dataclasses import GenomicRange, SequenceOccurrence
 
 
 class BuildGenomicRangeList:
@@ -40,7 +34,7 @@ class BuildGenomicRangeList:
 
     def from_search_results(
         self, genome: str, sequence_occurrences: List[SequenceOccurrence]
-    ):
+    ) -> List[GenomicRange]:
         return [
             self.build_genomic_range.at_sequence_occurrence_coordinates(occurrence)
             for occurrence in sequence_occurrences

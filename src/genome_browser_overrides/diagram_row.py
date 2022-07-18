@@ -8,7 +8,6 @@ from genome_browser import (
 from itertools import chain as chain
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
-from ostruct import OpenStruct
 
 
 class DiagramRow(Feature):
@@ -23,7 +22,7 @@ class DiagramRow(Feature):
         self.drawing_config = {
             "fill_polygons": False,
             "annotation_color": "slategrey",
-            "padding": 0.3,
+            "padding": 0.0025,
             **(drawing_config or {}),
         }
 
@@ -43,10 +42,17 @@ class DiagramRow(Feature):
         # The non-overlapping disjoint intervals are computed using the
         # logic which priortizes first position of interval, then length.
         levels = list(disjoint_bins(self._intervals))
+        annotation_levels = list(
+            disjoint_bins(
+                [(interval[0], interval[1] + 1000) for interval in self._intervals]
+            )
+        )
 
-        for (position, width, strand, color, text_label), level in zip(
-            self._sorted_features, levels
-        ):
+        for (
+            (position, width, strand, color, text_label),
+            level,
+            annotation_level,
+        ) in zip(self._sorted_features, levels, annotation_levels):
             # The polygon is simply a rectangle with two variable midpoints at
             # the middle of the left and right sides which act as anchors.
             # The four corners can be 'pulled back' (either left or right) to
@@ -71,9 +77,10 @@ class DiagramRow(Feature):
             ax.annotate(
                 text_label,
                 [position + width / 2, level + height / 2],
+                # [position + width / 2, annotation_level + height / 2],
                 color=self.drawing_config["annotation_color"],
                 ha="center",
-                va="center_baseline",
+                # va="center_baseline",
                 rotation=45,
                 rotation_mode="anchor",
             )

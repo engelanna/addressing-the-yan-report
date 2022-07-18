@@ -1,12 +1,15 @@
 from genome_browser import (
-    ASPECT,
+    # ASPECT,
     ax_off,
     cleanup_chart_junk,
     GenomeDiagram,
-    HSPACE,
+    # HSPACE,
 )
 from matplotlib import pyplot as plt
 import numpy as np
+
+ASPECT = 1.4
+HSPACE = 0.0
 
 
 class OverridenGenomeDiagram(GenomeDiagram):

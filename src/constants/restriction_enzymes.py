@@ -1,17 +1,8 @@
 from src.dataclasses.restriction_enzyme import RestrictionEnzyme
 
-RESTRICTION_ENZYMES_YAN_ET_AL = (
-    RestrictionEnzyme(
-        start_at_fraction_genome_length=None,
-        name="EcoRI",
-        sequence="GAATTC",
-    ),
-    RestrictionEnzyme(
-        start_at_fraction_genome_length=None,
-        name="BstEII",
-        sequence="GGTNACC",
-    ),
-)
+RESTRICTION_ENZYMES_YAN_ET_AL = lambda sequence: {
+    "GAATTC": "EcoRI",
+}.get(sequence, "BstEII")
 
 RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA = (
     RestrictionEnzyme(

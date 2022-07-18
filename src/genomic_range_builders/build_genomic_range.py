@@ -1,4 +1,8 @@
-from src.constants import COLORS
+from src.constants import (
+    COLOR_FROM_RESTRICTION_ENZYME_SEQUENCE,
+    COLORS,
+    RESTRICTION_ENZYMES_YAN_ET_AL,
+)
 from src.dataclasses import (
     GenomicRange,
     RestrictionEnzyme,
@@ -32,6 +36,6 @@ class BuildGenomicRange:
             start=occurrence.span[0],
             width=occurrence.span[1] - occurrence.span[0],
             strand=None,
-            color=COLORS.hit,
-            text_label=occurrence.sequence,
+            color=COLOR_FROM_RESTRICTION_ENZYME_SEQUENCE(occurrence.sequence),
+            text_label=RESTRICTION_ENZYMES_YAN_ET_AL(occurrence.sequence),
         )
