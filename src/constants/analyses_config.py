@@ -10,7 +10,7 @@ ANALYSES_CONFIG = OpenStruct(
     ),
     yan_et_al=OpenStruct(
         diagram_title=(
-            "EcoRI & BstEII restriction enzyme locations in the SARS-CoV-2 (accession MN908947.1) genome"
+            "Sequences identical to EcoRI or BstEII in the SARS-CoV-2 genome (accession MN908947.1)"
         )
     ),
 )

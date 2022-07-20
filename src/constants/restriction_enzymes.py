@@ -37,7 +37,7 @@ RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA = (
     ),
     RestrictionEnzyme(
         start_at_fraction_genome_length=0.819478623017831,
-        name="ORF3 TSE",
+        name="Open reading frame 3 TSE",
         sequence="ACTAAAC",
     ),
     RestrictionEnzyme(

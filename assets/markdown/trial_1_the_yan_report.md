@@ -12,7 +12,7 @@ In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-
 
 ---
 
-## Restriction enzymes around the spike protein's receptor binding motif
+## Restriction enzymes around the spike's receptor binding motif
 
 Mikolaj Raszek, PhD, was kind enough to elucidate, in [SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
 
@@ -51,8 +51,13 @@ In the accession page, switching to the FASTA format (a text format often used f
 
 ---
 
-## But where exactly? Plotting.
+## Plotting EcoRI/BstEII occurences across the whole genome :bar_chart:
 
+When one looks across the whole genome, one finds more 'genetic modifications' than they bargained for :thinking: There's even an EcoRI match in the 3' untranslated region (little point in bioengineering there as nothing there becomes proteins anyway).
+
+![Horizontal genes](https://user-images.githubusercontent.com/13955209/179870129-dd0ab4df-11f3-4c81-9904-7fc92fd5dba9.png)
+
+---
 
 <br>[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for approximating the probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
 
@@ -74,6 +79,6 @@ comb(  # number of combinations
 
 https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/
 
-Note: Yan et al measured from the beginning of the spike gene, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
+Note: Yan et al measured from the beginning of the spike, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
 
 Fatality: Occam's razor

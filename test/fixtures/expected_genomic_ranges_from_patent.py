@@ -13,7 +13,7 @@ def expected_genomic_ranges_from_patent():
         GenomicRange(17885, 1524, None, COLORS.miss, "BglI"),
         GenomicRange(20854, 1524, None, COLORS.miss, "SfiI"),
         GenomicRange(23112, 1524, None, COLORS.miss, "BglI"),
-        GenomicRange(24210, 1524, None, COLORS.miss, "ORF3 TSE"),
+        GenomicRange(24210, 1524, None, COLORS.miss, "Open reading frame 3 TSE"),
         GenomicRange(24210, 1524, None, COLORS.miss, "ClaI"),
         GenomicRange(25258, 1524, None, COLORS.miss, "PflMI"),
         GenomicRange(25465, 1524, None, COLORS.miss, "ScaI"),

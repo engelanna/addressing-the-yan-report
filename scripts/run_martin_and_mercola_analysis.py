@@ -6,7 +6,7 @@ from src.genome_browser_overrides import (
     DiagramRow,
     OverridenGenomeDiagram,
 )
-from src.genomic_range_builders import BuildGenomicRangeList
+from src.builders.genomic_range_builders import BuildGenomicRangeList
 from src.loaders import SoleSequenceFromFastaFile
 from src.restriction_enzyme_marks import RunBatteryOfRangeTests
 

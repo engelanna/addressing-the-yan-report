@@ -1,8 +1,3 @@
-1. Colours
-2. Padding DONE
-3. Label levels
-
-
 ---
 marp: true
 ---

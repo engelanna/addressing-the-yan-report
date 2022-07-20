@@ -10,6 +10,7 @@ from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
+from src.builders.chart_label_builders import ChartLabelFromGenomicRange
 from src.constants import COLOR_FROM_RESTRICTION_ENZYME_NAME
 
 
@@ -25,8 +26,10 @@ class DiagramRow(Feature):
         self.drawing_config = {
             "fill_polygons": False,
             "padding": 0.0025,
+            "display_locations": False,
             **(drawing_config or {}),
         }
+        self.chart_label_from_genomic_range = ChartLabelFromGenomicRange()
 
     @property
     def xlim(self):
@@ -49,8 +52,8 @@ class DiagramRow(Feature):
         # directional intervals
         pull_back = self.pullback * 0.005 * abs(np.subtract(*self.xlim))
 
-        for ((position, width, strand, color, text_label), level) in zip(
-            self._sorted_features, levels
+        for i, ((position, width, strand, color, text_label), level) in enumerate(
+            zip(self._sorted_features, levels)
         ):
 
             # pull_back is used on either the start or end of the interval
@@ -81,19 +84,23 @@ class DiagramRow(Feature):
                 )
             )
             ax.annotate(
-                text_label,
+                self.chart_label_from_genomic_range(
+                    text_label, position, width, text_label in ("EcoRI", "BstEII")
+                ),
                 [position + width / 2, level + height / 2],
                 color=COLOR_FROM_RESTRICTION_ENZYME_NAME(text_label),
-                ha="center",
-                va="center_baseline",
-                rotation=45,
+                ha="center",  # this is fine
+                va="baseline"
+                if text_label in ("EcoRI", "BstEII")
+                else "center_baseline",
+                rotation=90,
                 rotation_mode="anchor",
             )
 
         # For features, remove y-axis by default.
         ax = despine(ax_off(ax, axis="y"))
 
-        # Adjust y-limits to include self.drawing_config["padding, scales with the number of levels.
+        # Adjust y-limits to include padding, scales with the number of levels.
         ax.set_ylim(
             (0 - self.drawing_config["padding"]) * (max(levels) + 1) / 2,
             max(levels) + 1,

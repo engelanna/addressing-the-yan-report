@@ -1,4 +1,4 @@
-from src.genomic_range_builders import BuildGenomicRangeList
+from src.builders.genomic_range_builders import BuildGenomicRangeList
 from src.constants.analyses_config import ANALYSES_CONFIG
 
 

@@ -8,7 +8,7 @@ from genome_browser import (
 from matplotlib import pyplot as plt
 import numpy as np
 
-ASPECT = 1.4
+ASPECT = 2.8
 HSPACE = 0.0
 
 
@@ -18,7 +18,7 @@ class OverridenGenomeDiagram(GenomeDiagram):
     """
 
     def draw(self):
-        # Construct a one-column figure with rows that follow the hight_ratios
+        # Construct a one-column figure with rows that follow the height_ratios
         # defined in each of the tracks defined. At the moment only a generic
         # horizontal space parameter (HSPACE) is supplied, but spacing can be
         # tweaked post-draw.
@@ -62,7 +62,8 @@ class OverridenGenomeDiagram(GenomeDiagram):
                 ax.set_xticks(range(*map(int, ax.get_xlim()), track.step))
                 # Set the labels as numbers increasing by step, after 0.
                 ax.set_xticklabels(
-                    range(0, int(abs(np.subtract(*ax.get_xlim()))), track.step)
+                    range(0, int(abs(np.subtract(*ax.get_xlim()))), track.step),
+                    rotation=90,
                 )
                 ax.xaxis.set_major_formatter(lambda x, _pos: f"{x // 1000}k")
                 # Figure annotations will be applied to the last ax in offset
@@ -94,7 +95,6 @@ class OverridenGenomeDiagram(GenomeDiagram):
                     va="top",
                     ha="center",
                     annotation_clip=False,
-                    # style="italic,
-                    weight="bold",
+                    weight="bold",  # style="italic"
                 )
         return fig, axes

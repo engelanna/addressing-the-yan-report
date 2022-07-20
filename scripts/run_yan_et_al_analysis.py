@@ -6,7 +6,7 @@ from src.genome_browser_overrides import (
     DiagramRow,
     OverridenGenomeDiagram,
 )
-from src.genomic_range_builders import BuildGenomicRangeList
+from src.builders.genomic_range_builders import BuildGenomicRangeList
 from src.loaders import SoleSequenceFromFastaFile
 from src.matchers import NonoverlappingOccurrencesOfSequenceInGenome
 
@@ -28,7 +28,7 @@ sars_cov_2_genetic_structure_row = DiagramRow(
 ]
 
 
-restriction_enzymes_row = DiagramRow()
+restriction_enzymes_row = DiagramRow(drawing_config={"display_locations": True})
 [
     restriction_enzymes_row.add_feature(astuple(genomic_range))
     for genomic_range in BuildGenomicRangeList().from_search_results(
@@ -43,5 +43,4 @@ diagram.add_track(sars_cov_2_genetic_structure_row)
 diagram.add_track(restriction_enzymes_row)
 
 _fig, _axes = diagram.draw()
-
 plt.show()
