@@ -51,17 +51,33 @@ In the accession page, switching to the FASTA format (a text format often used f
 
 ---
 
-## Plotting EcoRI/BstEII occurences across the whole genome :bar_chart:
+## Plotting occurences in the spike gene
 
-When one looks across the whole genome, one finds more 'genetic modifications' than they bargained for :thinking: There's even an EcoRI match in the 3' untranslated region (little point in bioengineering there as nothing there becomes proteins anyway).
+You gotta give it to Yan et al: the spike gene does have EcoRI & BstEII occurences, and that's at the __exact__ coordinates specified by their team :dart: Neat :raised_hands:
 
-![Horizontal genes](https://user-images.githubusercontent.com/13955209/179870129-dd0ab4df-11f3-4c81-9904-7fc92fd5dba9.png)
+<br>
+
+| MN908947.1 spike coordinates | Yan et al's coordinates |
+|--------------|:-----:|
+| ![Spike genes](https://user-images.githubusercontent.com/13955209/179909322-8f79e271-2baf-4639-8db4-51f95d6db1bf.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png) |
 
 ---
 
-<br>[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) provides a formula for approximating the probability of a k-mer (word of size k) occurring in a text __by random chance alone__.
+## Plotting occurences across the whole genome
 
-<br>
+But looking at **all the genes** (instead of just the spike), one seems to find more 'genetic modifications' than Yan et al bargained for :thinking: There's even an EcoRI match in the 3' untranslated region (nothing there becomes proteins, hence little point in engineering).
+
+
+![All genes](https://user-images.githubusercontent.com/13955209/179872222-cb2ecf4a-3f04-4a1e-abb5-1cc1f5e15fad.png)
+
+---
+
+## Is this really the restriction enzyme cornucopia? :unicorn:
+
+[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) teaches approximating the probability of a k-mer (word of size k) occurring in a text, a certain number of times, __by random chance alone__.
+
+Here's [the Python version](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) (should you prefer it to the math equation from the link):
+
 ```python
 comb(  # number of combinations
     count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length
@@ -75,10 +91,19 @@ comb(  # number of combinations
 / pow(self.alphabet_size, text_length)
 ```
 
-<br>Here's [the Python version](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) should you prefer it to mathematical gobbledygook. Giving it a spin:
+The code's been [tested](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/main/test/probabilities/probability_of_kmer_occurring_n_times_in_text.py), so should be reliable. Let's take it for a spin :yarn::cat:
+
+---
 
 https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/
 
 Note: Yan et al measured from the beginning of the spike, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
+
+
+
+---
+
+Plotting EcoRI/BstEII occurences across just the spike 
+
 
 Fatality: Occam's razor
