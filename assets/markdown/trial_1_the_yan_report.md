@@ -1,5 +1,12 @@
 ---
 marp: true
+paginate: true
+class:
+    - invert
+style: |
+  section::after {
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+  }
 ---
 
 # Trial 1: [The Yan report](https://zenodo.org/record/4028830#.X1_bxGhKg2y)
@@ -17,6 +24,7 @@ In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-
 Mikolaj Raszek, PhD, was kind enough to elucidate, in [SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
 
 Two restriction enzymes (sequences bacteria use to slash virii to bits, repurposed by humans to glue parts of different genomes together): [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) and [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information). According to Yan et al, the sequence between them allowed for targetting mammals larger than bats.
+
 ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
 ---
@@ -51,59 +59,83 @@ In the accession page, switching to the FASTA format (a text format often used f
 
 ---
 
-## Plotting occurences in the spike gene
+## Plotting EcoRI & BstEII sequence matches in the spike gene
 
-You gotta give it to Yan et al: the spike gene does have EcoRI & BstEII occurences, and that's at the __exact__ coordinates specified by their team :dart: Neat :raised_hands:
+MN908947.1 spike coordinates | Yan et al's spike coordinates
+--------------|:-----:|
+![Spike genes](https://user-images.githubusercontent.com/13955209/179913693-f9ab603e-f143-4309-a19e-0f3996dec3dc.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
-<br>
-
-| MN908947.1 spike coordinates | Yan et al's coordinates |
-|--------------|:-----:|
-| ![Spike genes](https://user-images.githubusercontent.com/13955209/179909322-8f79e271-2baf-4639-8db4-51f95d6db1bf.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png) |
+The accession MN908947.1 spike gene **does** contain sequence occurences with 100% identity to EcoRI & BstEII, and that's at the __exact__ coordinates specified by Yan et al :dart: 
+So far so good - let's look at the rest of the genome :mag:
 
 ---
 
-## Plotting occurences across the whole genome
+## Plotting EcoRI & BstEII matches across the whole genome
 
-But looking at **all the genes** (instead of just the spike), one seems to find more 'genetic modifications' than Yan et al bargained for :thinking: There's even an EcoRI match in the 3' untranslated region (nothing there becomes proteins, hence little point in engineering).
+But looking at **all the genes** (instead of just the spike), one seems to find more 'genetic modifications' than Yan et al bargained for :thinking:
+
+There's even an EcoRI match in the 3' untranslated region (nothing there ever becomes live proteins, hence there's little point in engineering the region).
 
 
 ![All genes](https://user-images.githubusercontent.com/13955209/179872222-cb2ecf4a-3f04-4a1e-abb5-1cc1f5e15fad.png)
 
 ---
 
-## Is this really the restriction enzyme cornucopia? :unicorn:
+## A restriction enzyme cornucopia? :unicorn: Let's find out :woman_shrugging:
 
-[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) (search for `approximation`) teaches approximating the probability of a k-mer (word of size k) occurring in a text, a certain number of times, __by random chance alone__.
+<br>
 
-Here's [the Python version](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) (should you prefer it to the math equation from the link):
+[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) gives a formula (search for `approximation`) for approximating the likelihood that a **k-mer** (word of size k) occurs in a text **by random chance alone** :game_die:
+<br>
+The **lower** that likelihood, the **more** probable the bioengineering :dna::scissors::dna: Customarily, values with `< 5%` chance of being randomly generated, are worthy of investigation.
+<br>
+[Click here](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) for the Python version of the approximation formula :snake:. Its code's been [tested](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/main/test/probabilities/probability_of_kmer_occurring_n_times_in_text.py), so should be reliable. Let's take it for a spin :yarn::cat:
+
+---
+
+## :crossed_swords: Theory vs practice: probabilities along the full genome :dna:
+
+:one: A nice property of our approximation formula: if we seek the probability of **just a single occurrence**, any returned number `> 1.0` is the **expected occurrence count**.
+
+:two: BstEII's middle character  (GGT**N**ACC) can be anything, so BstEII is considered to have length 6 (the same length as EcoRI), instead of 7.
+
+<br>
+
+| Restriction enzyme | Expected occurrences | Actual occurrences |
+|-:|-:|:-|
+| EcoRI (**GAATTC**) | 7.44 | 9 (_...are Yan et al onto something?_)
+| BstEII (**GGT_ACC**) | 7.44 | 4 (_...no they aren't_)
+
+That hasn't helped much (or at all :laughing:), so let's concentrate on the spike now :eyes:
+
+---
+
+## Probabilities within the spike gene :pushpin:
+
+The [accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) informs us that the range of the `"S"` gene is `21579..25400`, which makes for a length of `3821`. Plugging this text length into our formula :electric_plug:, we get:
 
 ```python
-comb(  # number of combinations
-    count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length
-    + kmer_occurrence_count,
-    kmer_occurrence_count,
-)
-* pow(
-    self.alphabet_size,
-    count_of_ways_to_intersect_n_occurences_of_kmer_with_text_length,
-)
-/ pow(self.alphabet_size, text_length)
+In [3]: ProbabilityOfKmerOccurringNTimesInText(alphabet_size=4)(
+    ...:     text_length=3821, kmer_length=6, kmer_occurrence_count=1
+    ...: )
+Out[3]: 0.931640625
 ```
 
-The code's been [tested](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/main/test/probabilities/probability_of_kmer_occurring_n_times_in_text.py), so should be reliable. Let's take it for a spin :yarn::cat:
+There is a 93% probability of at least one sequence of length 6 (doesn't matter if it's EcoRI or BstEII) occurring, in a similar length spike protein gene of a coronavirus, just by random chance alone. How about the **joint probability of both of them occurring at once**? :point_down::eyes:
 
 ---
 
-https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/
+## Conclusion :unlock: :key:
 
-Note: Yan et al measured from the beginning of the spike, the [accession page]](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) puts that at 21579. 
+Since BstEII and EcoRI are considered the same length (after disregarding BstEII's arbitrary middle character, they're each 6 bases long), the joint probability of them occurring together in the spike is approximately `93% * 93%`:
 
+```python
+In [4]: 0.931640625 * 0.931640625
+Out[4]: 0.8679542541503906
+```
 
+:arrow_right: at least **86% of all coronaviruses** are going to have - in their spike protein gene - an EcoRI sequence occurring  together with a BstEII sequence. Without the need for **any** genetic engineering! :woman_shrugging:
 
----
+To put it differently, if SARS-CoV-2 was bioengineered in the way suggested by Yan et al :dna::scissors::dna:, so were 17 out of 20 coronaviruses that ever came before it.
 
-Plotting EcoRI/BstEII occurences across just the spike 
-
-
-Fatality: Occam's razor
+***But what if they were?*** :smile: Stay tuned for [Trial 2](assets/markdown/trial_2_martin_and_mercola.md):exclamation::wave:
