@@ -1,1 +1,0 @@
-from .sole_sequence_from_fasta_file import SoleSequenceFromFastaFile
