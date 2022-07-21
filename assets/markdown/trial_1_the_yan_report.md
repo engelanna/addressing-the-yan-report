@@ -42,7 +42,7 @@ Two restriction enzymes (sequences bacteria use to slash virii to bits, repurpos
 
 ## Download the earliest known SARS-CoV-2 genome :arrow_down: (2 of 2)
 
-In the accession page, switching to the FASTA format (a text format often used for storing reference genomes) allows us to download the troublemaker's genome:
+In [the accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), switching to the FASTA format (a text format often used for storing reference genomes) allows us to download the troublemaker's genome:
 
 ![Downloading](https://user-images.githubusercontent.com/13955209/179091431-050a1882-24e8-4591-b176-d2d905f269aa.png)
 
