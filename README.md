@@ -1,6 +1,10 @@
-Granted, this repo's a tad woo-woo :zany_face:
+---
+marp: true
+---
 
-But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart:
+# Verifying SARS-CoV-2 origin hypotheses
+
+Granted, this repo's a tad woo-woo :zany_face: But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart: 
 
 The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
