@@ -4,15 +4,11 @@ But you're **guaranteed** to **both** have fun, **and** learn something cool - s
 
 The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
----
-
 ## [Trial 1 (The Yan report)](https://drive.google.com/file/d/19Z1yPOWoqK_NX1sF8mWBpEUfyDa9cQoS)
 
 `Original title:` _Unusual Features of the SARS-CoV-2 Genome
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
 and Delineation of Its Probable Synthetic Route_
-
----
 
 ## Trial 2 (US patent 7279327B2: _Methods for producing recombinant coronavirus_) `WIP: ETA 22 Jul 2022`
 
