@@ -4,7 +4,7 @@ But you're **guaranteed** to **both** have fun, **and** learn something cool - s
 
 The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
-## [Trial 1 (The Yan report)](https://drive.google.com/file/d/19Z1yPOWoqK_NX1sF8mWBpEUfyDa9cQoS)
+## [Trial 1 (The Yan report)](docs/trial_1_the_yan_report.html)
 
 `Original title:` _Unusual Features of the SARS-CoV-2 Genome
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
