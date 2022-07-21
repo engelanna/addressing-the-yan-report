@@ -1,7 +1,3 @@
----
-marp: true
----
-
 Granted, this repo's a tad woo-woo :zany_face:
 
 But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart:
