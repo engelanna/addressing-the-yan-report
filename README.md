@@ -1,12 +1,16 @@
+---
+marp: true
+---
+
 Granted, this repo's a tad woo-woo :zany_face:
 
 But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart:
 
-The prezzies are self-contained, so clicking external links is fully optional :woman_shrugging:
+The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
 ---
 
-## [Trial 1 (The Yan report)](assets/html/trial_1_the_yan_report.html)
+## [Trial 1 (The Yan report)](https://docs.google.com/presentation/d/1QdF1tY8CW6nPaQ-KheVrJVjT3ED7hsNy/edit?usp=sharing&ouid=116232418664600063611&rtpof=true&sd=true)
 
 `Original title:` _Unusual Features of the SARS-CoV-2 Genome
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
