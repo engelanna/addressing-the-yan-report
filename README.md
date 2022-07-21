@@ -10,7 +10,7 @@ The prezzies are self-contained, so clicking any external links is fully optiona
 
 ---
 
-## [Trial 1 (The Yan report)](https://docs.google.com/presentation/d/1QdF1tY8CW6nPaQ-KheVrJVjT3ED7hsNy/edit?usp=sharing&ouid=116232418664600063611&rtpof=true&sd=true)
+## [Trial 1 (The Yan report)](https://drive.google.com/file/d/143m0WH8Cyhb8beS3sUaqL7S42e4jTxu9)
 
 `Original title:` _Unusual Features of the SARS-CoV-2 Genome
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
