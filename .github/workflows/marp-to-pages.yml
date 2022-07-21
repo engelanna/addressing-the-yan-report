@@ -27,7 +27,7 @@ jobs:
       - name: Marp Build (docs folder)
         uses: docker://marpteam/marp-cli:v1.7.0
         with:
-          args: -I assets/markdown/ -o build/docs/
+          args: -I assets/markdown/ -o build/docs/ --bespoke.transition --preview
         env:
           MARP_USER: root:root
 
