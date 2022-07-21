@@ -1,8 +1,7 @@
 ---
 marp: true
 paginate: true
-class:
-    - invert
+transition: cube
 style: |
   section::after {
     content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
@@ -110,7 +109,7 @@ That hasn't helped much (or at all :laughing:), so let's concentrate on the spik
 
 ---
 
-## Probabilities within the spike gene :pushpin:
+## Occurrence probabilities within the spike gene :pushpin:
 
 The [accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) informs us that the range of the `"S"` gene is `21579..25400`, which makes for a length of `3821`. Plugging this text length into our formula :electric_plug:, we get:
 
@@ -121,7 +120,7 @@ In [3]: ProbabilityOfKmerOccurringNTimesInText(alphabet_size=4)(
 Out[3]: 0.931640625
 ```
 
-There is a 93% probability of at least one sequence of length 6 (doesn't matter if it's EcoRI or BstEII) occurring, in a similar length spike protein gene of a coronavirus, just by random chance alone. How about the **joint probability of both of them occurring at once**? :point_down::eyes:
+There's a 93% probability of at least one sequence of length 6 (doesn't matter if it's EcoRI or BstEII) occurring, in a coronavirus spike gene of that length, just by random chance alone. How about the **joint probability of both of them occurring at once**? :point_down::eyes:
 
 ---
 
@@ -134,8 +133,8 @@ In [4]: 0.931640625 * 0.931640625
 Out[4]: 0.8679542541503906
 ```
 
-:arrow_right: at least **86% of all coronaviruses** are going to have - in their spike protein gene - an EcoRI sequence occurring  together with a BstEII sequence. Without the need for **any** genetic engineering! :woman_shrugging:
+:arrow_right: at least **86% of all coronaviruses** are going to have - in their spike protein gene - an EcoRI sequence occurring  together with a BstEII sequence. Without the need for **any** genetic engineering :woman_shrugging:
 
-To put it differently, if SARS-CoV-2 was bioengineered in the way suggested by Yan et al :dna::scissors::dna:, so were 17 out of 20 coronaviruses that ever came before it.
+To put it differently: if SARS-CoV-2 was engineered like Yan et al suggest :scissors::dna:, then 17 out of every 20 pre-pandemic coronaviruses must have also been engineered :speak_no_evil:
 
-***But what if they were?*** :smile: Stay tuned for [Trial 2](assets/markdown/trial_2_martin_and_mercola.md):exclamation::wave:
+***But... but what if they were?*** :smile: Stay tuned for [Trial 2](assets/markdown/trial_2_martin_and_mercola.md):exclamation::wave:
