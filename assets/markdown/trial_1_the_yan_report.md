@@ -84,9 +84,9 @@ There's even an EcoRI match in the 3' untranslated region (nothing there ever be
 
 <br>
 
-[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) gives a formula (search for `approximation`) for approximating the likelihood that a **k-mer** (word of size k) occurs in a text **by random chance alone** :game_die:
+[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) gives the formula (search for `approximation`) for approximating the likelihood that a **k-mer** (word of size k) occurs in a text *by random chance alone* :game_die:
 <br>
-The **lower** that likelihood, the **more** probable the bioengineering :dna::scissors::dna: Customarily, values with `< 5%` chance of being randomly generated, are worthy of investigation.
+The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any bioengineering :dna::scissors::dna: Customarily, values with `< 5%` chance of being randomly generated, are worthy of investigation.
 <br>
 [Click here](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/master/src/probabilities/probability_of_kmer_occurring_n_times_in_text.py#L14-L23) for the Python version of the approximation formula :snake:. Its code's been [tested](https://github.com/engelanna/verifying-sars-cov-2-origin-hypotheses/blob/main/test/probabilities/test_probability_of_kmer_occurring_n_times_in_text.py), so should be reliable. Let's take it for a spin :yarn::cat:
 
