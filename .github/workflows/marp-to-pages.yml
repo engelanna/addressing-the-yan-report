@@ -15,7 +15,7 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
 
       - name: Marp Build (assets/markdown folder)
         uses: docker://marpteam/marp-cli:v1.7.0
