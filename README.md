@@ -1,10 +1,14 @@
 # Verifying SARS-CoV-2 origin hypotheses
 
-Granted, this repo's a tad woo-woo :zany_face:
+Granted, this repo's a tad woo-woo :zany_face: But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart: The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
-But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart: 
+<br>
 
-The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
+Yaaaay, I got GitHub pages + MARP transitions working! :heart: :tada: You need to enable `documentTransition API` in your browser's `chrome://flags` to see them, though.
+
+<br>
+
+![MARP transitions](https://user-images.githubusercontent.com/13955209/180341390-edc39a15-1017-429c-9922-ab29677c22cb.gif)
 
 ## [Trial 1 (The Yan report)](https://engelanna.github.io/verifying-sars-cov-2-origin-hypotheses/docs/trial_1_the_yan_report.html)
 
