@@ -6,7 +6,7 @@ Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both**
 
 <br>
 
-![MARP transitions](https://user-images.githubusercontent.com/13955209/180345367-9222550d-6851-4253-80b7-5b067282e6f3.gif)
+![MARP transitions](https://user-images.githubusercontent.com/13955209/180347224-3aad4a16-ac4c-4d19-a095-afbd5691adf0.gif)
 
 ## [Trial 1 (The Yan report)](https://engelanna.github.io/verifying-sars-cov-2-origin-hypotheses/docs/trial_1_the_yan_report.html)
 
@@ -14,6 +14,6 @@ Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both**
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
 and Delineation of Its Probable Synthetic Route_
 
-## [Trial 2 (US patent 7279327B2: _Methods for producing recombinant coronavirus_)](https://engelanna.github.io/verifying-sars-cov-2-origin-hypotheses/docs/trial_2_martin_and_mercola.md)
+## Trial 2 (US patent 7279327B2: _Methods for producing recombinant coronavirus_) `WIP`
 
 `Original title:` _Patents Prove SARS-CoV-2 Is A Manufactured Virus_
