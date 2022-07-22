@@ -22,7 +22,7 @@ In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-
 
 Mikolaj Raszek, PhD, was kind enough to elucidate, in [SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
 
-Two restriction enzymes (sequences bacteria use to slash virii to bits, repurposed by humans to glue parts of different genomes together): [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) and [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information). According to Yan et al, the sequence between them allowed for targetting mammals larger than bats.
+Two restriction enzymes (sequences bacteria use to slash virii to bits, repurposed by humans to glue parts of different genomes together): [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) and [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information). According to Yan et al, the sequence between them allowed to target mammals larger than :bat::bat:.
 
 ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
@@ -84,7 +84,7 @@ There's even an EcoRI match in the 3' untranslated region (nothing there ever be
 
 <br>
 
-[Bioinformatics Algorithms: An Active Learning Approach](https://bioinformaticsalgorithms.com/faqs/replication.html) gives the formula (search for `approximation`) for approximating the likelihood that a **k-mer** (word of size k) occurs in a text *by random chance alone* :game_die:
+[_Bioinformatics Algorithms: An Active Learning Approach_](https://bioinformaticsalgorithms.com/faqs/replication.html) gives the formula (search for `approximation`) for approximating the likelihood that a **k-mer** (word of size k) occurs in a text *by random chance alone* :game_die:
 <br>
 The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any bioengineering :dna::scissors::dna: Customarily, values with `< 5%` chance of being randomly generated, are worthy of investigation.
 <br>
