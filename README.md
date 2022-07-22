@@ -1,12 +1,8 @@
 # Verifying SARS-CoV-2 origin hypotheses
 
-Granted, this repo's a tad woo-woo :zany_face: But you're **guaranteed** to **both** have fun, **and** learn something cool - so, dig in :heart: The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
+Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both** have fun, **and** learn something cool - so, dig in :shovel: The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
 
-<br>
-
-Yaaaay, I got GitHub pages + MARP transitions working! :heart: :tada: You need to enable `documentTransition API` in your browser's `chrome://flags` to see them, though.
-
-<br>
+:tada: Yaaaay, I got GitHub pages + [Marp](https://marp.app/) transitions working! :heart: You need to enable `documentTransition API` in your browser's `about://flags` to see them, though.
 
 ![MARP transitions](https://user-images.githubusercontent.com/13955209/180341390-edc39a15-1017-429c-9922-ab29677c22cb.gif)
 
