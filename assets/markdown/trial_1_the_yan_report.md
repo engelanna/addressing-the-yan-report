@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-transition: clockwise
+transition: cube
 style: |
   section::after {
     content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
