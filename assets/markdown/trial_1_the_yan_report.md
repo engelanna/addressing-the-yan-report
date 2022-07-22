@@ -10,7 +10,7 @@ style: |
 
 # Trial 1: [The Yan report](https://zenodo.org/record/4028830#.X1_bxGhKg2y)
 
-In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :fearful: Zenodo granting it a Digital Object Identifier (DOI) made the report appear credible, despite the lack of peer review.
+In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-2 being an engineered bioweapon :fearful: Zenodo granting it a Digital Object Identifier (DOI) made the report appear credible, despite a lack of peer review.
 
 <br>The Johns Hopkins University [made up for that lack](https://www.centerforhealthsecurity.org/our-work/pubs_archive/pubs-pdfs/2020/200921-in-response-yan.pdf) the same month, explaining why the report was unconvincing. But conspiratorial audiences :raised_eyebrow::raised_eyebrow: value neither authority, nor being pointed to tonnes of reading material (can't blame them for the latter :smile:).
 
@@ -20,9 +20,9 @@ In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-
 
 ## Restriction enzymes around the spike's receptor binding motif
 
-Mikolaj Raszek, PhD, was kind enough to elucidate, in [SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
+The article [_SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?_](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2) elucidates the core claim of the Yan report, dubbing the claim _by far the strongest hint of human manipulation of the virus [...]_ :fire::
 
-Two restriction enzymes (sequences bacteria use to slash virii to bits, repurposed by humans to glue parts of different genomes together): [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) and [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information). According to Yan et al, the sequence between them allowed to target mammals larger than :bat::bat:.
+Two **restriction enzymes** (sequences bacteria use to slash viruses to bits, repurposed by humans to glue parts of different genomes together): [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) and [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information). According to Yan et al, the sequence between them allowed to target mammals larger than :bat::bat:.
 
 ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
@@ -52,6 +52,8 @@ In [the accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), switch
 
 ## Are EcoRI and BstEII _actually there_? :mag::eyes:
 
+- **Note:** Sequences identical to those listed **needn't** necessarily come from restriction enzymes - but let's simplify and humour that notion :ok_hand::woman:
+
 <br>You can open the downloaded SARS-CoV-2 genome in a text editor :clipboard:, and search (`Ctrl+f` / `Cmd+f`) for the occurrences of the [EcoRI](https://www.neb.com/products/r0101-ecori#Product%20Information) sequence __GAATTC__ yourself. If you fancy a dopamine rush, __stop reading and go ahead now__ :grin:
 
 <br>The __N__ (= whichever base) in [BstEII](https://www.neb.com/products/r0162-bsteii#Product%20Information)'s __GGTNACC__ is a tad more problematic, though. If you can locate _regular expression mode_ (look for a button marked `.*`) :crossed_fingers:, this hurdle can be cleared by inputting __GGT[ACGT]ACC__.
@@ -65,6 +67,7 @@ MN908947.1 spike coordinates | Yan et al's spike coordinates
 ![Spike genes](https://user-images.githubusercontent.com/13955209/179913693-f9ab603e-f143-4309-a19e-0f3996dec3dc.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
 The accession MN908947.1 spike gene **does** contain sequence occurences with 100% identity to EcoRI & BstEII, and that's at the __exact__ coordinates specified by Yan et al :dart: 
+
 So far so good - let's look at the rest of the genome :mag:
 
 ---
@@ -73,7 +76,7 @@ So far so good - let's look at the rest of the genome :mag:
 
 But looking at **all the genes** (instead of just the spike), one seems to find more 'genetic modifications' than Yan et al bargained for :thinking:
 
-There's even an EcoRI match in the 3' untranslated region (nothing there ever becomes live proteins, hence there's little point in engineering the region).
+There's even an EcoRI match in the 3' untranslated region (nothing there ever becomes live proteins, hence there's no point in engineering the region).
 
 
 ![All genes](https://user-images.githubusercontent.com/13955209/179872222-cb2ecf4a-3f04-4a1e-abb5-1cc1f5e15fad.png)
@@ -97,7 +100,6 @@ The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any
 :one: A nice property of our approximation formula: if we seek the probability of **just a single occurrence**, any returned number `> 1.0` is the **expected occurrence count**.
 
 :two: BstEII's middle character  (GGT**N**ACC) can be anything, so BstEII is considered to have length 6 (the same length as EcoRI), instead of 7.
-
 <br>
 
 | Restriction enzyme | Expected occurrences | Actual occurrences |
@@ -105,7 +107,7 @@ The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any
 | EcoRI (**GAATTC**) | 7.44 | 9 (_...are Yan et al onto something?_)
 | BstEII (**GGT_ACC**) | 7.44 | 4 (_...no they aren't_)
 
-That hasn't helped much (or at all :laughing:), so let's concentrate on the spike now :eyes:
+No conclusive evidence either way yet :woman_shrugging: Let's concentrate on the spike :eyes:
 
 ---
 
@@ -137,4 +139,4 @@ Out[4]: 0.8679542541503906
 
 To put it differently: if SARS-CoV-2 was engineered like Yan et al suggest :scissors::dna:, then 17 out of every 20 pre-pandemic coronaviruses must have also been engineered :speak_no_evil:
 
-***But... but what if they were?*** :smile: Stay tuned for [Trial 2](assets/markdown/trial_2_martin_and_mercola.md):exclamation::wave:
+***But... but what if they were?*** :smile: Stay tuned for [Trial 2](https://engelanna.github.io/verifying-sars-cov-2-origin-hypotheses/docs/trial_2_martin_and_mercola.md):exclamation::wave:

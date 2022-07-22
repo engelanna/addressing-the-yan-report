@@ -1,8 +1,8 @@
 # Verifying SARS-CoV-2 origin hypotheses
 
-Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both** have fun, **and** learn something cool - so, dig in :pick: The prezzies are self-contained, so clicking any external links is fully optional :woman_shrugging:
+Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both** have fun, **and** learn something cool - so dig in :pick: We won't be taking any sides - instead, finding verifiable hypotheses, and putting them to an actual test :mag:
 
-:tada: Yaaaay, I got GitHub pages + [Marp](https://marp.app/) transitions working! :heart: You need to enable `documentTransition API` in your browser's `about://flags` to see them, though.
+:tada: Yay, I got [Marp](https://marp.app/) transitions working with GitHub pages :heart: You need to enable `documentTransition API` in your browser's `about://flags` to see the transitions, though.
 
 <br>
 
@@ -14,6 +14,6 @@ Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both**
 Suggesting Sophisticated Laboratory Modification Rather Than Natural Evolution 
 and Delineation of Its Probable Synthetic Route_
 
-## Trial 2 (US patent 7279327B2: _Methods for producing recombinant coronavirus_) `WIP: ETA 22 Jul 2022`
+## [Trial 2 (US patent 7279327B2: _Methods for producing recombinant coronavirus_)](https://engelanna.github.io/verifying-sars-cov-2-origin-hypotheses/docs/trial_2_martin_and_mercola.md)
 
 `Original title:` _Patents Prove SARS-CoV-2 Is A Manufactured Virus_
