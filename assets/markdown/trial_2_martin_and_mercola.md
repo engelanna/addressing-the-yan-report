@@ -19,7 +19,7 @@ With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.
 :two: A human and a chimp: 98% 👨🏽🐵
 :three: A human and a mouse: 85% 👨🏽:mouse:
 
-...and then you have our two coronaviruses at 79% :alien:👾
+...and then you have our two coronaviruses at 79% 👾:alien:
 
 ---
 
@@ -33,7 +33,7 @@ With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.
 
 ## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
 
-Luckily, the article does go on to narrow the list down a bit. If it's your first run-in with the biotechnology patent world, you're probably in for :zap: some shock:
+Luckily, the article does go on to narrow the list down a bit. If it's your first run-in with the biotechnology patent world, you're probably in for some :zap: shock:
 
 - [Canine coronavirus S[pike] gene and uses therefor](https://patents.google.com/patent/US6057436A/en)
     - Filed for by Pfizer in 1993 :arrow_right: granted 2000
