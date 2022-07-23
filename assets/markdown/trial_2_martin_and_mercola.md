@@ -13,17 +13,17 @@ style: |
 
 Welcome to July 2021, and meet today's protagonist: _dad_ 👨🏽👍🏽, also known as **SARS-CoV-1**.
 
-With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.org/wiki/SARS-related_coronavirus) **species**, and are about 79% genetically identical (_make the same proteins_). Putting the number in perspective:
+With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.org/wiki/SARS-related_coronavirus) **species**, and are about 79% genetically identical (= making the same proteins). Putting the number in perspective:
 
 :one: Two random humans are 99.8-99.9% identical 👨🏽👨🏿
 :two: A human and a chimp: 98% 👨🏽🐵
 :three: A human and a mouse: 85% 👨🏽:mouse:
 
-...and then you have our two coronaviruses at 79% 👾:alien:
+...and then you have our two coronaviruses at 79% :alien:👾
 
 ---
 
-## <!-- fit -->Heard you like reading, so we put some reading in your reading
+## <!-- fit -->Heard you like reading, so we put some reading in your reading so you can read while you read
 
 :us: _Citizen's Journal_ opens its [_Patents Prove SARS-CoV-2 Is A Manufactured Virus_](https://www.citizensjournal.us/patents-prove-sars-cov-2-is-a-manufactured-virus/) with [a list of every SARS-CoV-1-related patent](https://www.m-cam.com/wp-content/uploads/2020/04/20200403_SARS_CoV_Patent_Corpus_Lit_Review.pdf) known to man :books::closed_book::books::skull:
 
@@ -31,7 +31,7 @@ With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.
 
 ---
 
-## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
+## Your first time reading patents = violent reality shifts ahead :scream:
 
 Luckily, the article does go on to narrow the list down a bit. If it's your first run-in with the biotechnology patent world, you're probably in for some :zap: shock:
 
@@ -41,25 +41,40 @@ Luckily, the article does go on to narrow the list down a bit. If it's your firs
     - suggests spike injection into other viruses, for targetting other species :grin::+1::+1:
 - [Coronavirus isolated from humans](https://patents.google.com/patent/US7220852B1/en)
     - Filed by Centers of Disease Control and Prevention in 2004 :arrow_right: granted 2007
-    - patents a naturally occurring, living thing (took a few tries) :woman_shrugging:
+    - patents a naturally occurring, living thing (though it took a few tries) :woman_shrugging:
+
+---
+
+## <!-- fit --> The favourite appears, blowing the competition out of the water :dancer: 
+<br>
+
+* [_Methods for producing recombinant coronavirus_](https://patents.google.com/patent/US7279327B2/en) :dna::scissors::dna:
+	* _'an infectious replication-defective coronavirus, specifically targeted for human lung epithelium'_ :lungs:
+	*  _'Several months after that patent filing, the SARS outbreak in Asia occurred'_ 
+	* _'In other words, we made SARS'_ :thinking:
+
+
+<br>Well done, marketing team - it's very hard to resist checking this :heart_eyes: What's inside? :eyes:
+
+---
+
+## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
+
+ ![patent images](https://user-images.githubusercontent.com/13955209/180583567-7ecf5f5d-d9be-4e0f-b4dc-e16ec47da549.gif)
+
+What subset of the processes described applies to SARS-CoV-1?
+
+---
+
+## Working a posteriori = _ridiculously_ easy :information_source: selection
+
+Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard anything that doesn't match that structure:
+
+
 
 ---
 
 ## Settling on a hypothesis :ballot_box_with_check:
-
-The [Methods for producing recombinant coronavirus (US7279327B2)](https://patents.google.com/patent/US7279327B2/en) patent looks like something we **could verify**, using a modern SARS-CoV-2 genome. How come?
-
-	Spike	
-	 3	
-	Envelope	
-	Membrane	
-	 6	
-	 7	
-	 8	
-	Nucleocapsid	
-	3' UTR	
-
----
 
 FIG. 1D depicts the strategy for assembling recombinant TGEV and replicon cDNAs. The six cDNA subclones (TGEV A, B1, B2, C, DE1, and F deletion fragments) spanning the genome are flanked by unique interconnecting BglI and BstXI sites, allowing for directional assembly into a full-length replicon cDNA by in vitro ligation. TGEV A contained a unique T7 start site at the 5′ end and the deletion fragments (FiGFP2-AvrII and FiGFP2-EcoNI) contain GFP and a 25-nt T tail, allowing for the synthesis of capped T7, polyadenylated transcripts in vitro.
 

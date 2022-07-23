@@ -1,0 +1,2 @@
+from .yan_et_al_genome_diagram import YanEtAlGenomeDiagram
+from .martin_and_mercola_genome_diagram import MartinAndMercolaGenomeDiagram

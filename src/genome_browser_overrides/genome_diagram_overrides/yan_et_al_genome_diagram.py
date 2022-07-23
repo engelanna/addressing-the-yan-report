@@ -12,7 +12,7 @@ ASPECT = 2.8
 HSPACE = 0.0
 
 
-class OverridenGenomeDiagram(GenomeDiagram):
+class YanEtAlGenomeDiagram(GenomeDiagram):
     """
     Formats the xticks as 1k, 2k, ...
     """
