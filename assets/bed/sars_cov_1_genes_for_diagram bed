@@ -1,14 +1,14 @@
 ssRNA+	0	263	5' untranslated region	0	+
-ssRNA+	264	21484	Open reading frame 1ab	0	+
+ssRNA+	264	21484	ORF 1ab	0	+
 ssRNA+	21491	25258	Spike	0	+
-ssRNA+	25267	26091	Open reading frame 3a	0	+
-ssRNA+	25688	26152	Open reading frame 3b	0	+
+ssRNA+	25267	26091	ORF 3a	0	+
+ssRNA+	25688	26152	ORF 3b	0	+
 ssRNA+	26116	26346	Envelope	0	+
 ssRNA+	26397	27062	Membrane	0	+
-ssRNA+	26912	27264	Open reading frame 6	0	+
-ssRNA+	27272	27640	Open reading frame 7a	0	+
-ssRNA+	27637	27771	Open reading frame 7b	0	+
-ssRNA+	27778	27897	Open reading frame 8a	0	+
-ssRNA+	27863	28117	Open reading frame 8b	0	+
+ssRNA+	26912	27264	ORF 6	0	+
+ssRNA+	27272	27640	ORF 7a	0	+
+ssRNA+	27637	27771	ORF 7b	0	+
+ssRNA+	27778	27897	ORF 8a	0	+
+ssRNA+	27863	28117	ORF 8b	0	+
 ssRNA+	28119	29387	Nucleocapsid	0	+
 ssRNA+	28795	29750	3' untranslated region	0	+

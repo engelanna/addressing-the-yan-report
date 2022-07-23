@@ -13,6 +13,8 @@ import numpy as np
 from src.builders.chart_label_builders import ChartLabelFromGenomicRange
 from src.constants import COLOR_FROM_RESTRICTION_ENZYME_NAME
 
+PADDING = 0.0025
+
 
 class DiagramRow(Feature):
     """
@@ -20,15 +22,9 @@ class DiagramRow(Feature):
     Changes step to 1k.
     """
 
-    def __init__(self, name=None, height_ratio=1, drawing_config: dict = None):
+    def __init__(self, name=None, height_ratio=0.4):
         Feature.__init__(self, name, height_ratio)
         self.step = 1000
-        self.drawing_config = {
-            "fill_polygons": False,
-            "padding": 0.0025,
-            "display_locations": False,
-            **(drawing_config or {}),
-        }
         self.chart_label_from_genomic_range = ChartLabelFromGenomicRange()
 
     @property
@@ -42,7 +38,7 @@ class DiagramRow(Feature):
             ax = plt.gca()
 
         # Height of the features is some percent less than one.
-        height = 1 / (self.drawing_config["padding"] + 1)
+        height = 1 / (PADDING + 1)
 
         # The non-overlapping disjoint intervals are computed using the
         # logic which priortizes first position of interval, then length.
@@ -79,13 +75,18 @@ class DiagramRow(Feature):
                     linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
-                    fill=self.drawing_config["fill_polygons"],
+                    fill=True
+                    if text_label in ("Envelope", "Membrane", "Nucleocapsid", "Spike")
+                    else False,
                     color=color,
                 )
             )
             ax.annotate(
                 self.chart_label_from_genomic_range(
-                    text_label, position, width, text_label in ("EcoRI", "BstEII")
+                    text_label,
+                    position,
+                    width,
+                    should_print_range=text_label in ("EcoRI", "BstEII"),
                 ),
                 [position + width / 2, level + height / 2],
                 color=COLOR_FROM_RESTRICTION_ENZYME_NAME(text_label),
@@ -102,7 +103,7 @@ class DiagramRow(Feature):
 
         # Adjust y-limits to include padding, scales with the number of levels.
         ax.set_ylim(
-            (0 - self.drawing_config["padding"]) * (max(levels) + 1) / 2,
+            (0 - PADDING) * (max(levels) + 1) / 2,
             max(levels) + 1,
         )
         ax.set_xlim(*self.xlim)

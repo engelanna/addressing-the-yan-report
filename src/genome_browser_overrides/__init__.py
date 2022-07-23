@@ -1,2 +1,2 @@
 from .diagram_row import DiagramRow
-from .genome_diagram_overrides import *
+from .overridden_genome_diagram import OverridenGenomeDiagram

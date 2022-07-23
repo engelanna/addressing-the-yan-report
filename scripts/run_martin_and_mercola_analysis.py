@@ -4,16 +4,14 @@ from matplotlib import pyplot as plt
 from src.constants.analyses_config import ANALYSES_CONFIG
 from src.genome_browser_overrides import (
     DiagramRow,
-    MartinAndMercolaGenomeDiagram,
+    OverridenGenomeDiagram,
 )
 from src.builders.genomic_range_builders import BuildGenomicRangeList
 from src.loaders import SoleSequenceFromFastaFile
 from src.restriction_enzyme_marks import RunBatteryOfRangeTests
 
 
-sars_cov_1_structure_row = DiagramRow(
-    height_ratio=0.4,
-)
+sars_cov_1_structure_row = DiagramRow()
 [
     sars_cov_1_structure_row.add_feature(astuple(genomic_range))
     for genomic_range in BuildGenomicRangeList().from_bed_file(
@@ -23,7 +21,6 @@ sars_cov_1_structure_row = DiagramRow(
 
 # restriction_enzymes_row = DiagramRow(
 #     f"Restriction enzymes",
-#     height_ratio=0.4,
 #     drawing_config={"fill_polygons": True, "annotation_color": "black"},
 # )
 # [
@@ -37,7 +34,7 @@ sars_cov_1_structure_row = DiagramRow(
 # ]
 
 
-diagram = MartinAndMercolaGenomeDiagram()
+diagram = OverridenGenomeDiagram()
 diagram.add_track(sars_cov_1_structure_row)
 # diagram.add_track(restriction_enzymes_row)
 
