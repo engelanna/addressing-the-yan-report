@@ -11,11 +11,11 @@ style: |
 
 # <!-- fit --> Trial 2 - [US patent 7279327B2: _Methods for producing recombinant coronavirus_](https://patents.google.com/patent/US7279327B2/en)
 
-Welcome to July 2021, and meet today's protagonist: _dad_ 👨🏽👍🏽, also known as **SARS-CoV-1**.
+Welcome back to July 2021, and meet today's protagonist: _dad_ 👨🏽👍🏽, also known as **SARS-CoV-1**.
 
 With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.org/wiki/SARS-related_coronavirus) **species**, and are about 79% genetically identical (= making the same proteins). Putting the number in perspective:
 
-:one: Two random humans are 99.8-99.9% identical 👨🏽👨🏿
+:one: Two random humans are 99.8% identical 👨🏽👨🏿
 :two: A human and a chimp: 98% 👨🏽🐵
 :three: A human and a mouse: 85% 👨🏽:mouse:
 
@@ -54,11 +54,11 @@ Luckily, the article does go on to narrow the list down a bit. If it is one's fi
 	* _'In other words, we made SARS'_ :thinking:
 
 
-<br>Well done, marketing team - it's very hard to resist checking this :heart_eyes: What's inside? :eyes:
+<br>Well done, marketing team - it's very hard to resist :heart_eyes: (...checking whether the SARS-CoV-1 genetic sequence matches the methods therein). What's inside? :eyes:
 
 ---
 
-## No trivial matter to be sure... or is it? :wink:
+## No trivial matter... or is it? :wink:
 
  ![patent images](https://user-images.githubusercontent.com/13955209/180583567-7ecf5f5d-d9be-4e0f-b4dc-e16ec47da549.gif)
 
@@ -68,33 +68,31 @@ Looks scarily complex :speak_no_evil: But what subset actually applies to SARS-C
 
 ## <!-- fit -->Working _a posteriori_, information selection almost feels like cheating :grin:
 
-Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard any instructions that don't match that (actual output) structure.
+Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard any instructions leading to a different structure.
 
-- we'll be going with SARS-CoV-1's [earliest accession](https://www.ncbi.nlm.nih.gov/nuccore/NC_004718.3) in version `.3`, as it conveniently lists gene begin/end ranges better the initial `.1` or `.2`.
+- **Note:** we're sticking with SARS-CoV-1's earliest accession at version [.3](https://www.ncbi.nlm.nih.gov/nuccore/NC_004718.3) - as it conveniently lists gene begin/end coordinates (unlike the earlier versions [.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_004718.1) or [.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_004718.2))
 
 ![SARS-CoV-1](https://user-images.githubusercontent.com/13955209/180600804-17b8bdd2-700c-49d9-bd9b-6ceedf1c4696.png)
 
-Paying attention to just the colored structural genes, their order is **S, E, M , N** :pencil:
+Paying attention to just the coloured-in structural genes, their order is **S, E, M , N** :pencil:
+No need to investigate the other 2 paths in the patent: **S**, **N**, **E**, **M**, **N** or **S**, **N**, **E**, **M** :woman_shrugging:
 
 ---
 
-## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
+## The :pig::pig: are glowing green: meet the patent's protagonists
 
-
-Provided we want to check restriction enzymes
+ The patent uses:
+- _Transmissible gastroenteritis virus_ (**TGEV**) as **the backbone** :bone:
+  - other sequences are inserted into it :arrow_up:
+- _Porcine reproductive and respiratory syndrome virus_ (**PRRSV**) as **an insert** :key:
+  - the "visitor" being inserted into the backbone
+- _Green fluorescent protein_ (**GFP**) as **another insert** :key:
 
 ---
 
 ## Settling on a hypothesis :ballot_box_with_check:
 
 
-FIG. 4A depicts the structure of constructs expressing recombinant PRRS GP5.
-
-Previous studies have demonstrated that the PRRSV M protein accumulates in the ER of infected cells where it forms disulfide-linked heterodimers with GP5. Heterodimer formation may be critical in eliciting neutralizing antibody against conformational epitopes (Balasuriya, et al. (2000) J. Virol. 74:10623-30). Using the TGEV 3F subclone (FIG. 4A), GFP was removed by ClaI/PflMI digestion and replaced with GP5 of PRRSV to create icTGEV PRSS GP5 recombinant viruses (FIG. 4A).
-
-GFP was removed by ClaI/PflMI digestion and replaced with GP5 of PRRSV to create icTGEV PRSS GP5 recombinant viruses (FIG. 4A).
 
 ---
-
-_Introduce Occam's razor_
 
