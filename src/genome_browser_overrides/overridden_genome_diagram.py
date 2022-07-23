@@ -35,7 +35,7 @@ class OverridenGenomeDiagram(GenomeDiagram):
 
         # If this figure has a name, make it the title.
         if self.name is not None:
-            fig.suptitle(self.name, x=0.5, y=0.94, fontsize=24)
+            fig.suptitle(self.name, x=0.5, y=0.94, fontsize=10, weight="bold")
 
         # If we are only plotting one track then put it in an iterable for zip.
         if len(self.tracks) == 1:
@@ -81,20 +81,4 @@ class OverridenGenomeDiagram(GenomeDiagram):
                         color="0.6",
                         clip_on=False,
                     )
-
-            # Provide simple logic for plotting a track annotation in the
-            # top left of each track. The position will remain constant as its
-            # defined using proportional values of the ax's x and y limits.
-            if track.annotate is True and track.name is not None:
-                ax.annotate(
-                    track.name,
-                    xy=(
-                        ax.get_xlim()[1] / 2,
-                        ax.get_ylim()[1] * 1.25,
-                    ),
-                    va="top",
-                    ha="center",
-                    annotation_clip=False,
-                    weight="bold",  # style="italic"
-                )
         return fig, axes

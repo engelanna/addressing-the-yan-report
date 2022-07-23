@@ -33,11 +33,12 @@ With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.
 
 ## Your first time reading patents = violent reality shifts ahead :scream:
 
-Luckily, the article does go on to narrow the list down a bit. If it's your first run-in with the biotechnology patent world, you're probably in for some :zap: shock:
+Luckily, the article does go on to narrow the list down a bit. If it is one's first run-in with the biotechnology patents world, one is probably in for some :zap: shock:
 
 - [Canine coronavirus S[pike] gene and uses therefor](https://patents.google.com/patent/US6057436A/en)
     - Filed for by Pfizer in 1993 :arrow_right: granted 2000
     - the first contact with a spiked coronavirus had taken place in the 1970s, when military sentry :dog::dog: (:de: shepherds) suffered a violent diarrhea epidemic
+      - _must resist the urge to emoji, must resist..._
     - suggests spike injection into other viruses, for targetting other species :grin::+1::+1:
 - [Coronavirus isolated from humans](https://patents.google.com/patent/US7220852B1/en)
     - Filed by Centers of Disease Control and Prevention in 2004 :arrow_right: granted 2007
@@ -49,7 +50,7 @@ Luckily, the article does go on to narrow the list down a bit. If it's your firs
 <br>
 
 * [_Methods for producing recombinant coronavirus_](https://patents.google.com/patent/US7279327B2/en) :dna::scissors::dna:
-	* _'an infectious replication-defective coronavirus, specifically targeted for human lung epithelium'_ :lungs:
+	* _'An infectious replication-defective coronavirus, specifically targeted for human lung epithelium'_ :lungs:
 	*  _'Several months after that patent filing, the SARS outbreak in Asia occurred'_ 
 	* _'In other words, we made SARS'_ :thinking:
 
@@ -58,17 +59,25 @@ Luckily, the article does go on to narrow the list down a bit. If it's your firs
 
 ---
 
-## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
+## No trivial matter to be sure... or is it? :wink:
 
  ![patent images](https://user-images.githubusercontent.com/13955209/180583567-7ecf5f5d-d9be-4e0f-b4dc-e16ec47da549.gif)
 
-What subset of the processes described applies to SARS-CoV-1?
+Looks scarily complex :speak_no_evil: But what subset actually applies to SARS-CoV-1?
 
 ---
 
-## Working a posteriori = _ridiculously_ easy :information_source: selection
+## <!-- fit -->Working _a posteriori_, information selection almost feels like cheating :grin:
 
-Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard anything that doesn't match that structure:
+Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard any instructions that don't match that (actual) structure.
+
+![SARS-CoV-1](https://user-images.githubusercontent.com/13955209/180598681-63b32acf-7450-42fd-9896-f869d0eb3a64.png)
+
+Paying attention to just the colored structural proteins, their order is **S, E, M , N** :pencil:
+
+---
+
+## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
 
 
 

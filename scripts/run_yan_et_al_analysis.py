@@ -16,7 +16,7 @@ genome = SoleSequenceFromFastaFile()(
 )
 
 
-sars_cov_2_genetic_structure_row = DiagramRow(ANALYSES_CONFIG.yan_et_al.diagram_title)
+sars_cov_2_genetic_structure_row = DiagramRow()
 [
     sars_cov_2_genetic_structure_row.add_feature(astuple(genomic_range))
     for genomic_range in BuildGenomicRangeList().from_bed_file(
@@ -35,7 +35,7 @@ restriction_enzymes_row = DiagramRow()
     )
 ]
 
-diagram = OverridenGenomeDiagram()
+diagram = OverridenGenomeDiagram(ANALYSES_CONFIG.yan_et_al.diagram_title)
 diagram.add_track(sars_cov_2_genetic_structure_row)
 diagram.add_track(restriction_enzymes_row)
 
