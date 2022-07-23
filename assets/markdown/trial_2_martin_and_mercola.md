@@ -36,12 +36,11 @@ With **SARS-CoV-2**, they make up **the same** [SARSr-CoV](https://en.wikipedia.
 Luckily, the article does go on to narrow the list down a bit. If it is one's first run-in with the biotechnology patents world, one is probably in for some :zap: shock:
 
 - [Canine coronavirus S[pike] gene and uses therefor](https://patents.google.com/patent/US6057436A/en)
-    - Filed for by Pfizer in 1993 :arrow_right: granted 2000
+    - filed for by Pfizer in 1993 :arrow_right: granted 2000
     - the first contact with a spiked coronavirus had taken place in the 1970s, when military sentry :dog::dog: (:de: shepherds) suffered a violent diarrhea epidemic
-      - _must resist the urge to emoji, must resist..._
     - suggests spike injection into other viruses, for targetting other species :grin::+1::+1:
 - [Coronavirus isolated from humans](https://patents.google.com/patent/US7220852B1/en)
-    - Filed by Centers of Disease Control and Prevention in 2004 :arrow_right: granted 2007
+    - filed by Centers of Disease Control and Prevention in 2004 :arrow_right: granted 2007
     - patents a naturally occurring, living thing (though it took a few tries) :woman_shrugging:
 
 ---
@@ -69,43 +68,31 @@ Looks scarily complex :speak_no_evil: But what subset actually applies to SARS-C
 
 ## <!-- fit -->Working _a posteriori_, information selection almost feels like cheating :grin:
 
-Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard any instructions that don't match that (actual) structure.
+Since SARS-CoV-1 already exists :arrow_right: we know its structure :arrow_right: we can discard any instructions that don't match that (actual output) structure.
 
-![SARS-CoV-1](https://user-images.githubusercontent.com/13955209/180598681-63b32acf-7450-42fd-9896-f869d0eb3a64.png)
+- we'll be going with SARS-CoV-1's [earliest accession](https://www.ncbi.nlm.nih.gov/nuccore/NC_004718.3) in version `.3`, as it conveniently lists gene begin/end ranges better the initial `.1` or `.2`.
 
-Paying attention to just the colored structural proteins, their order is **S, E, M , N** :pencil:
+![SARS-CoV-1](https://user-images.githubusercontent.com/13955209/180600804-17b8bdd2-700c-49d9-bd9b-6ceedf1c4696.png)
+
+Paying attention to just the colored structural genes, their order is **S, E, M , N** :pencil:
 
 ---
 
 ## Whittling it down :knife::seedling::deciduous_tree::deciduous_tree:
 
 
+Provided we want to check restriction enzymes
 
 ---
 
 ## Settling on a hypothesis :ballot_box_with_check:
 
-FIG. 1D depicts the strategy for assembling recombinant TGEV and replicon cDNAs. The six cDNA subclones (TGEV A, B1, B2, C, DE1, and F deletion fragments) spanning the genome are flanked by unique interconnecting BglI and BstXI sites, allowing for directional assembly into a full-length replicon cDNA by in vitro ligation. TGEV A contained a unique T7 start site at the 5′ end and the deletion fragments (FiGFP2-AvrII and FiGFP2-EcoNI) contain GFP and a 25-nt T tail, allowing for the synthesis of capped T7, polyadenylated transcripts in vitro.
-
-Clones were identified by DNA sequencing using an ABI model 377 automated sequencer and constructs TGEV pFiGFP2(PflMI) and TGEV iGFP2(ScaI) were subsequently used in the assembly of recombinant TGEV viral cDNA and as the backbone for the construction of structural gene deletions (FIG. 1D).
-
-The six cDNA subclones spanning the entire TGEV genome, including the FiGFP2(PflMI) and FiGFP2(PflMI) deletion subclones, were used to assemble TGEV viral and replicon constructs, respectively, as previously described (FIG. 1D) (Yount, et al. (2000) J. Virol. 74:10600-10611; Curtis, et al. (2002) J. Virol. 76:1422-1434).
-
----
 
 FIG. 4A depicts the structure of constructs expressing recombinant PRRS GP5.
 
 Previous studies have demonstrated that the PRRSV M protein accumulates in the ER of infected cells where it forms disulfide-linked heterodimers with GP5. Heterodimer formation may be critical in eliciting neutralizing antibody against conformational epitopes (Balasuriya, et al. (2000) J. Virol. 74:10623-30). Using the TGEV 3F subclone (FIG. 4A), GFP was removed by ClaI/PflMI digestion and replaced with GP5 of PRRSV to create icTGEV PRSS GP5 recombinant viruses (FIG. 4A).
 
 GFP was removed by ClaI/PflMI digestion and replaced with GP5 of PRRSV to create icTGEV PRSS GP5 recombinant viruses (FIG. 4A).
-
----
-
-FIG. 5 depicts the structure of the TGEV N gene rearranged viruses. The TGEV N gene and TSE were inserted downstream of the 3A TSE site by removing the ORF 3A (TGEV 2N(PflMI)) or ORF 3A and a part of ORF 3B (TGEV 2N(ScaI)). The downstream N gene was flanked by restriction sites and removed to produce the SNEM rearranged viruses.
-
-The results provided above suggest that flanking sequences enhance transcription from the N TSE element. To test this hypothesis, GFP was replaced with the TGEV N gene and N TSE site as shown in FIG. 5. TGEV recombinant viruses were isolated that contained two copies of the N gene (TGEV 2N) as well as TGEV SNEM rearranged viruses that lack the “natural N orientation, and express N from the ORF3 position (FIG. 5).
-
-2N viruses
 
 ---
 
