@@ -21,40 +21,27 @@ sars_cov_1_structure_row = DiagramRow(
     )
 ]
 
-# sars_cov_2_structure_row = DiagramRow(
+# restriction_enzymes_row = DiagramRow(
+#     f"Restriction enzymes",
 #     height_ratio=0.4,
-#     drawing_config={"fill_polygons": True},
+#     drawing_config={"fill_polygons": True, "annotation_color": "black"},
 # )
 # [
-#     sars_cov_2_structure_row.add_feature(astuple(genomic_range))
-#     for genomic_range in BuildGenomicRangeList().from_bed_file(
-#         ANALYSES_CONFIG.yan_et_al.sars_cov_2_gene_ranges_bed_file_path
+#     restriction_enzymes_row.add_feature(astuple(genomic_range))
+#     for genomic_range in RunBatteryOfRangeTests()(
+#         genome=SoleSequenceFromFastaFile()(
+#             ANALYSES_CONFIG.yan_et_al.sars_cov_2_genome_fasta_path
+#         ),
+#         mismatches_allowed=1,
 #     )
 # ]
 
 
-restriction_enzymes_row = DiagramRow(
-    f"Restriction enzymes",
-    height_ratio=0.4,
-    drawing_config={"fill_polygons": True, "annotation_color": "black"},
-)
-[
-    restriction_enzymes_row.add_feature(astuple(genomic_range))
-    for genomic_range in RunBatteryOfRangeTests()(
-        genome=SoleSequenceFromFastaFile()(
-            ANALYSES_CONFIG.yan_et_al.sars_cov_2_genome_fasta_path
-        ),
-        mismatches_allowed=1,
-    )
-]
-
-
 diagram = MartinAndMercolaGenomeDiagram()
 diagram.add_track(sars_cov_1_structure_row)
-# diagram.add_track(sars_cov_2_structure_row)
 # diagram.add_track(restriction_enzymes_row)
 
 # Annotate the figure with interval specific metadata. Will always appear in lower-right
-diagram.annotation = "{}:{:,}-{:,}".format("chr3", 20000, 812383)
+diagram.annotation = ANALYSES_CONFIG.martin_and_mercola.diagram_annotation
 fig, axes = diagram.draw()
 plt.show()

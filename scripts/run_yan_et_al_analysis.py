@@ -42,5 +42,6 @@ diagram = YanEtAlGenomeDiagram()
 diagram.add_track(sars_cov_2_genetic_structure_row)
 diagram.add_track(restriction_enzymes_row)
 
+diagram.annotation = ANALYSES_CONFIG.yan_et_al.diagram_annotation
 _fig, _axes = diagram.draw()
 plt.show()
