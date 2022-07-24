@@ -1,4 +1,7 @@
-### Addressing the Yan Report: a fair trial of the most famous SARS-CoV-2 lab origin hypothesis
+### Addressing the Yan Report
+_A fair trial of the most famous SARS-CoV-2 lab origin hypothesis_
+
+---
 
 Granted, this repo's a tad woo-woo :zany_face: But guaranteed to be fun **and** teach you something cool - so, dig in :pick:
 
