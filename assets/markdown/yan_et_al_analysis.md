@@ -18,7 +18,7 @@ In September 2020, the above claimed to **be** scientific evidence for SARS-CoV-
 
 ---
 
-## Restriction enzymes around the spike's receptor binding motif
+## <!-- fit --> Restriction enzymes around the spike's receptor binding motif
 
 Mikolaj Raszek, PhD, was kind enough to elucidate, in [_SARS-CoV-2 coronavirus origins alternative theories – do they hold up against science?_](https://merogenomics.ca/blog/en/117/SARS-CoV-2_coronavirus_origins_alternative_theories__do_they_hold_up_against_science_Part_2), the core claim of the Yan report.
 
@@ -28,7 +28,7 @@ Two **restriction enzymes** (sequences bacteria use to slash viruses to bits, re
 
 ---
 
-## Download the earliest known SARS-CoV-2 genome :arrow_down: (1 of 2)
+## <!-- fit --> Download the earliest known SARS-CoV-2 genome :arrow_down: (1 of 2)
 
 <br>Yan et al's image caption cites the isolate **Wuhan-Hu-1** (isolate: a population of organisms having little genetic mixing with other organisms of the same species).
 
@@ -40,7 +40,7 @@ Two **restriction enzymes** (sequences bacteria use to slash viruses to bits, re
 
 ---
 
-## Download the earliest known SARS-CoV-2 genome :arrow_down: (2 of 2)
+## <!-- fit --> Download the earliest known SARS-CoV-2 genome :arrow_down: (2 of 2)
 
 In [the accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), switching to the FASTA format (a text format often used for storing reference genomes) allows us to download the troublemaker's genome:
 
@@ -60,7 +60,7 @@ In [the accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), switch
 
 ---
 
-## Plotting EcoRI & BstEII sequence matches in the spike gene
+## <!-- fit --> Plotting EcoRI & BstEII sequence matches in the spike gene
 
 MN908947.1 spike coordinates | Yan et al's spike coordinates
 --------------|:-----:|
@@ -72,7 +72,7 @@ So far so good - let's look at the rest of the genome :mag:
 
 ---
 
-## Plotting EcoRI & BstEII matches across the whole genome
+## <!-- fit --> Plotting EcoRI & BstEII matches across the whole genome
 
 But looking at **all the genes** (instead of just the spike), one seems to find more 'genetic modifications' than Yan et al bargained for :thinking:
 
@@ -95,7 +95,7 @@ The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any
 
 ---
 
-## :crossed_swords: Theory vs practice: probabilities along the full genome :dna:
+## <!-- fit -->:crossed_swords: Theory vs practice: probabilities along the full genome :dna:
 
 :one: A nice property of our approximation formula: if we seek the probability of **just a single occurrence**, any returned number `> 1.0` is the **expected occurrence count**.
 
