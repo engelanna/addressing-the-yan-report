@@ -67,7 +67,6 @@ MN908947.1 spike coordinates | Yan et al's spike coordinates
 ![Spike genes](https://user-images.githubusercontent.com/13955209/179913693-f9ab603e-f143-4309-a19e-0f3996dec3dc.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
 The accession MN908947.1 spike gene **does** contain sequence occurences with 100% identity to EcoRI & BstEII, and that's at the __exact__ coordinates specified by Yan et al :dart: 
-
 So far so good - let's look at the rest of the genome :mag:
 
 ---
