@@ -1,7 +1,7 @@
 from dataclasses import astuple
 from matplotlib import pyplot as plt
 
-from src.constants import ANALYSES_CONFIG, COLORS
+from src.constants import ANALYSES_CONFIG
 from src.genome_browser_overrides import (
     DiagramRow,
     OverridenGenomeDiagram,

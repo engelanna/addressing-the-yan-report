@@ -1,6 +1,5 @@
-# The Yan report vs Verifying SARS-CoV-2 origin hypotheses
+# Addressing the Yan report
 
-The Yan report has been called 
 Granted, this repo's a tad woo-woo :zany_face: But you're guaranteed to **both** have fun, **and** learn something cool - so dig in :pick: We won't be taking any sides - instead, finding verifiable hypotheses, and putting them to an actual test :mag:
 
 :tada: Yay, I got [Marp](https://marp.app/) transitions working with GitHub pages :heart: You need to enable `documentTransition API` in your browser's `about://flags` to see the transitions, though.

@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "verifying-sars-cov-2-origin-hypotheses"
+name = "addressing-the-yan-report"
 version = "0.1.0"
-description = "The fair trials of two, ahem, alternative origin theories :smile: (using basic genomics)."
+description = "A fair trial of the most famous SARS-CoV-2 lab origin hypothesis."
 authors = ["Anna Engel <anna.julia.engel@gmail.com>"]
 license = "MIT"
 
