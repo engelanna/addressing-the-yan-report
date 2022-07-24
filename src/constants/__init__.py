@@ -4,7 +4,4 @@ from .colors import (
     COLOR_FROM_RESTRICTION_ENZYME_NAME,
     sequence_sought_to_color,
 )
-from .restriction_enzymes import (
-    RESTRICTION_ENZYMES_MARTIN_AND_MERCOLA,
-    sequence_sought_to_enzyme_name,
-)
+from .restriction_enzymes import sequence_sought_to_enzyme_name
