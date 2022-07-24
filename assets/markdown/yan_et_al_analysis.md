@@ -137,4 +137,4 @@ Out[4]: 0.8679542541503906
 
 :arrow_right: at least **86% of all coronaviruses** are going to have - in their spike protein gene - an EcoRI sequence occurring  together with a BstEII sequence. Without the need for **any** genetic engineering :woman_shrugging:
 
-To put it differently: if SARS-CoV-2 was bioengineered :scissors::dna:, liked suggested by Yan et al, then 17 for every 20 coronaviruses occurring in nature **also were**. Why go to the trouble of bioengineering SARS-CoV-2, if nature has already done the work:question:
+To put it differently: if SARS-CoV-2 was bioengineered :scissors::dna:, like suggested by Yan et al, then 17 for every 20 coronaviruses occurring in nature **also were**. Why go to the trouble of bioengineering SARS-CoV-2, when nature has already done the work:question:
