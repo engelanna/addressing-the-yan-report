@@ -113,7 +113,7 @@ No conclusive evidence either way yet :woman_shrugging: Let's concentrate on the
 
 ## Occurrence probabilities within the spike gene :pushpin:
 
-The [accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) informs us that the range of the `"S"` gene is `21579..25400`, which makes for a length of `3821`. Plugging this text length into our formula :electric_plug:, we get:
+[The accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1) informs us that the range of the `"S"` gene is `21579..25400`, which makes for a length of `3821`. Plugging this text length into our formula :electric_plug:, we get:
 
 ```python
 In [3]: ProbabilityOfKmerOccurringNTimesInText(alphabet_size=4)(
@@ -137,4 +137,4 @@ Out[4]: 0.8679542541503906
 
 :arrow_right: at least **86% of all coronaviruses** are going to have - in their spike protein gene - an EcoRI sequence occurring  together with a BstEII sequence. Without the need for **any** genetic engineering :woman_shrugging:
 
-To put it differently: if SARS-CoV-2 was bioengineered :scissors::dna:, like suggested by Yan et al, then 17 for every 20 coronaviruses occurring in nature **also were**. Why go to the trouble of bioengineering SARS-CoV-2, when nature has already done the work:question:
+Putting it differently: if SARS-CoV-2 was bioengineered :scissors::dna: the way Yan et al suggested, then 17 in 20 coronaviruses occurring in nature **also were**. Why go through the trouble of bioengineering SARS-CoV-2, when nature has already done the work:question:
