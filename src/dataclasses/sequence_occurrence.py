@@ -5,4 +5,5 @@ from typing import Tuple
 @dataclass
 class SequenceOccurrence:
     span: Tuple[int, int]
-    sequence: str
+    sequence_sought: str
+    sequence_found: str

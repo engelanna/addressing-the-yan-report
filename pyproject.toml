@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "verifying-sars-cov-2-origin-hypotheses"
 version = "0.1.0"
-description = "The fair trials of two, ahem, alternative origin theories :smile: (#bioinformatics)."
+description = "The fair trials of two, ahem, alternative origin theories :smile: (using basic genomics)."
 authors = ["Anna Engel <anna.julia.engel@gmail.com>"]
 license = "MIT"
 

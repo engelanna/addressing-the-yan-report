@@ -11,11 +11,13 @@ COLORS = OpenStruct(
 COLOR_FROM_RESTRICTION_ENZYME_NAME = lambda sequence: {
     "EcoRI": COLORS.hit,
     "BstEII": COLORS.hit_alternate,
+    "BglI": COLORS.hit,
+    "BstXI": COLORS.hit_alternate,
 }.get(sequence, COLORS.structure_annotation)
 
-COLOR_FROM_RESTRICTION_ENZYME_SEQUENCE = lambda sequence: {
+sequence_sought_to_color = lambda sequence: {
     "GAATTC": COLORS.hit,
-    "GGTAACC": COLORS.hit_alternate,
+    "GGTNACC": COLORS.hit_alternate,
     "GGTCACC": COLORS.hit_alternate,
     "GGTGACC": COLORS.hit_alternate,
     "GGTTACC": COLORS.hit_alternate,

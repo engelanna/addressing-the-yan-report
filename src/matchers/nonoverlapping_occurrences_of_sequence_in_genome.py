@@ -25,6 +25,10 @@ class NonoverlappingOccurrencesOfSequenceInGenome:
         )
 
         return [
-            SequenceOccurrence(span=match_object.span(), sequence=match_object.group())
+            SequenceOccurrence(
+                span=match_object.span(),
+                sequence_sought=sequence,
+                sequence_found=match_object.group(),
+            )
             for match_object in match_objects
         ]
