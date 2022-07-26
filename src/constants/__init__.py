@@ -1,4 +1,4 @@
-from .analyses_config import ANALYSES_CONFIG
+from .analysis_config import ANALYSIS_CONFIG
 from .colors import (
     COLORS,
     COLOR_FROM_RESTRICTION_ENZYME_NAME,
