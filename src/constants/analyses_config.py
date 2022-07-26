@@ -1,6 +1,6 @@
 from ostruct import OpenStruct
 
-ANALYSIS_CONFIG = OpenStruct(
+ANALYSES_CONFIG = OpenStruct(
     yan_et_al=OpenStruct(
         diagram_title=(
             "Sequences identical to EcoRI or BstEII in the SARS-CoV-2 genome (accession MN908947.1)"

@@ -1,11 +1,11 @@
 from ostruct import OpenStruct
 
 COLORS = OpenStruct(
-    hit="#6495ed",  # cornflower blue
-    hit_alternate="limegreen",
-    miss="white",
-    structure="lightgrey",
-    structure_annotation="black",
+    hit="limegreen",
+    hit_alternate="red",
+    miss="slategrey",
+    structure="darkorange",
+    structure_annotation="blue",
 )
 
 COLOR_FROM_RESTRICTION_ENZYME_NAME = lambda sequence: {

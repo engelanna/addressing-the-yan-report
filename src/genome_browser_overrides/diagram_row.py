@@ -75,7 +75,7 @@ class DiagramRow(Feature):
                     linewidth=0.5,
                     closed=True,
                     alpha=ALPHA,
-                    fill=False
+                    fill=True
                     if text_label in ("Envelope", "Membrane", "Nucleocapsid", "Spike")
                     else False,
                     color=color,

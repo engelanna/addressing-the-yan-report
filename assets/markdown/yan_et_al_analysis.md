@@ -64,7 +64,7 @@ In [the accession page](https://www.ncbi.nlm.nih.gov/nuccore/MN908947.1), switch
 
 MN908947.1 spike coordinates | Yan et al's spike coordinates
 --------------|:-----:|
-![Spike genes](https://user-images.githubusercontent.com/13955209/181119997-a5e82b91-d3f1-413a-8263-e865f3b8d0a0.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
+![Spike genes](https://user-images.githubusercontent.com/13955209/179913693-f9ab603e-f143-4309-a19e-0f3996dec3dc.png) | ![Heart of the Yan report](https://user-images.githubusercontent.com/13955209/179063218-748bafb5-5ad1-4f32-a4da-89bd1e3e259f.png)
 
 The accession MN908947.1 spike gene **does** contain sequence occurences with 100% identity to EcoRI & BstEII, and that's at the __exact__ coordinates specified by Yan et al :dart: 
 So far so good - let's look at the rest of the genome :mag:
@@ -78,7 +78,7 @@ But looking at **all the genes** (instead of just the spike), one seems to find 
 There's even an EcoRI match in the 3' untranslated region (nothing there ever becomes live proteins, hence there's no point in engineering the region).
 
 
-![All genes](https://user-images.githubusercontent.com/13955209/181116691-92aceb19-ae18-4a27-8ea7-c5b5e018d387.png)
+![All genes](https://user-images.githubusercontent.com/13955209/179872222-cb2ecf4a-3f04-4a1e-abb5-1cc1f5e15fad.png)
 
 ---
 

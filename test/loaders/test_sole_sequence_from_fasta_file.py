@@ -1,12 +1,12 @@
 from pytest import raises
 from src.loaders import SoleSequenceFromFastaFile
-from src.constants.analysis_config import ANALYSIS_CONFIG
+from src.constants.analyses_config import ANALYSES_CONFIG
 
 
 class TestSoleSequenceFromFastaFile:
     def test_length_of_the_only_sequence(
         self,
-        file_path=ANALYSIS_CONFIG.yan_et_al.sars_cov_2_genome_fasta_path,
+        file_path=ANALYSES_CONFIG.yan_et_al.sars_cov_2_genome_fasta_path,
         expected_length=30473,
     ):
         actual_length = len(SoleSequenceFromFastaFile()(file_path))
