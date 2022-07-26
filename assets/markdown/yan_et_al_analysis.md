@@ -99,7 +99,6 @@ The **lower** :arrow_down: that likelihood, the **more probable** :arrow_up: any
 :one: A nice property of our approximation formula: if we seek the probability of **just a single occurrence**, any returned number `> 1.0` is the **expected occurrence count**.
 
 :two: BstEII's middle character  (GGT**N**ACC) can be anything, so BstEII is considered to have length 6 (the same length as EcoRI), instead of 7.
-<br>
 
 | Restriction enzyme | Expected occurrences | Actual occurrences |
 |-:|-:|:-|
